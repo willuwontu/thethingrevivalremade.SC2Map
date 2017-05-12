@@ -5,10 +5,54 @@
 // Name:   Just Another StarCraft II Map
 // 
 //==================================================================================================
-include "TriggerLibs/natives"
+include "TriggerLibs/NativeLib"
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+void InitLibs () {
+    libNtve_InitLib();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger Variables
+//--------------------------------------------------------------------------------------------------
+trigger gt_Test;
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Test
+//--------------------------------------------------------------------------------------------------
+bool gt_Test_Func (bool testConds, bool runActions) {
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogCreate(500, 400, c_anchorCenter, 0, 0, true);
+    DialogSetFullscreen(DialogLastCreated(), true);
+    DialogSetImageVisible(DialogLastCreated(), false);
+    DialogSetVisible(DialogLastCreated(), PlayerGroupAll(), true);
+    DialogControlCreateFromTemplate(DialogLastCreated(), c_triggerControlTypePanel, "CustomUI/DefaultWindow");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_Test_Init () {
+    gt_Test = TriggerCreate("gt_Test_Func");
+    TriggerAddEventMapInit(gt_Test);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger Initialization
+//--------------------------------------------------------------------------------------------------
+void InitTriggers () {
+    gt_Test_Init();
+}
 
 //--------------------------------------------------------------------------------------------------
 // Map Initialization
 //--------------------------------------------------------------------------------------------------
 void InitMap () {
+    InitLibs();
+    InitTriggers();
 }

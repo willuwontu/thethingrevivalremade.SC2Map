@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Constant name="StatusBarHeight" val="25"/>
+
+    <Frame type="UnitStatusFrame" name="HeroVitals">
+        <Width val="400"/>
+        <Anchor side="Top" relative="$parent" pos="Min" offset="5"/>
+        <Anchor side="Bottom" relative="$this/EnergyBar" pos="Max" offset="0"/>
+        <PreserveAnchorOffset val="true"/>
+
+        <Frame type="Image" name="Background">
+            <Anchor side="Top" relative="$parent/UnitName" pos="Max" offset="-5"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="-5"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="5"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="5"/>
+            <Texture val="@@UI/StandardListBox"/>
+            <TextureType val="Border"/>
+            <Tiled val="true"/>
+            <Visible val="true"/>
+            <Unclipped val="true"/>
+            <RenderPriority val="500"/>
+        </Frame>
+
+        <Frame type="UnitStatusUnitName" name="UnitName">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Height val="30"/>
+
+            <Frame type="Label" name="Label">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Style val="@@StandardTooltip"/>
+                <RenderType val="HDR"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="UnitStatusHealthBar" name="HealthBar">
+            <Anchor side="Top" relative="$parent/UnitName" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <CollapseLayout val="true"/>
+            <PreserveAnchorOffset val="true"/>
+            <Height val="#StatusBarHeight"/>
+            <Texture val="@UI/HealthBar"/>
+            <OwnerColor val="135,255,135" index="0"/>
+            <AllyColor val="0,200,0" index="0"/>
+            <EnemyColor val="150,15,50" index="0"/>
+            <ReductionColor val="255,0,0" index="0"/>
+            <ReductionShown val="true" index="0"/>
+            <IncreaseDuration val="1000" index="0"/>
+            <DecreaseDuration val="3000" index="0"/>
+            <Segmented val="true"/>
+            <SegmentValue val="50"/>
+        </Frame>
+
+        <Frame type="UnitStatusHealthLabel" name="HealthLabel">
+            <Anchor relative="$parent/HealthBar"/>
+            <ShowPercent val="false"/>
+
+            <Frame type="Label" name="StatusLabel">
+                <Anchor relative="$parent"/>
+                <Style val="EditorPropertyButton"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="UnitStatusShieldsBar" name="ShieldsBar">
+            <Anchor side="Top" relative="$parent/HealthBar" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <CollapseLayout val="true"/>
+            <PreserveAnchorOffset val="true"/>
+            <Height val="#StatusBarHeight"/>
+            <Texture val="@UI/HealthBar"/>
+            <OwnerColor val="0,150,150" index="0"/>
+            <AllyColor val="0,150,150" index="0"/>
+            <EnemyColor val="0,150,150" index="0"/>
+            <ReductionColor val="255,0,0" index="0"/>
+            <ReductionShown val="true" index="0"/>
+            <IncreaseDuration val="0" index="0"/>
+            <DecreaseDuration val="1000" index="0"/>
+            <Segmented val="true"/>
+            <SegmentValue val="50"/>
+        </Frame>
+
+        <Frame type="UnitStatusShieldsLabel" name="ShieldsLabel">
+            <Anchor relative="$parent/ShieldsBar"/>
+            <ShowPercent val="false"/>
+
+            <Frame type="Label" name="StatusLabel">
+                <Anchor relative="$parent"/>
+                <Style val="EditorPropertyButton"/>
+            </Frame>
+        </Frame>
+
+        <Frame type="UnitStatusEnergyBar" name="EnergyBar">
+            <Anchor side="Top" relative="$parent/ShieldsBar" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <CollapseLayout val="true"/>
+            <PreserveAnchorOffset val="true"/>
+            <Height val="#StatusBarHeight"/>
+            <Texture val="@UI/HealthBar"/>
+            <OwnerColor val="150,40,220" index="0"/>
+            <AllyColor val="150,40,220" index="0"/>
+            <EnemyColor val="150,40,220" index="0"/>
+            <ReductionColor val="255,0,0" index="0"/>
+            <ReductionShown val="true" index="0"/>
+            <IncreaseDuration val="0" index="0"/>
+            <DecreaseDuration val="100" index="0"/>
+            <Segmented val="true"/>
+            <SegmentValue val="50"/>
+        </Frame>
+
+        <Frame type="UnitStatusEnergyLabel" name="EnergyLabel">
+            <Anchor relative="$parent/EnergyBar"/>
+            <ShowPercent val="false"/>
+
+            <Frame type="Label" name="StatusLabel">
+                <Style val="EditorPropertyButton"/>
+                <Anchor relative="$parent"/>
+            </Frame>
+        </Frame>
+
+        <StateGroup name="Wiggle">
+            <DefaultState val="Life"/>
+            <State name="Life">
+                <When type="Property" frame="$this" Visible="False" Index="0"/>
+                <Action type="SetAnchor" frame="$this" side="Bottom" relative="$this/HealthBar" pos="Max" offset="0"/>
+            </State>
+            <State name="Energy">
+                <When type="Property" frame="$this" Visible="True" Index="0"/>
+                <Action type="SetAnchor" frame="$this" side="Bottom" relative="$this/EnergyBar" pos="Max" offset="0"/>
+            </State>
+        </StateGroup>
+    </Frame>
+    
+    <!-- The Default window for the pop-up windows from menus in game -->
+    
+    <Frame type="Control" name="DefaultWindow">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$this/ScrollableList" pos="Min" offset="0"/>
+        <Anchor side="Right" relative="$this/ScrollableList" pos="Max" offset="0"/>
+        <Anchor side="Bottom" relative="$this/ScrollableList" pos="Max" offset="0"/>
+        <Draggable val="true"/>
+        <PreserveAnchorOffset val="true"/>
+        <DragConstraintFrame val="$parent"/>
+        <DragCursor val="GripClosed"/>
+        <DragHoverCursor val="GripOpen"/>
+        
+        <Frame type="Image" name="Background">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="@UI/StandardListBox"/>
+            <TextureType val="Border"/>
+            <Tiled val="true"/>            
+        </Frame>
+        
+        <!-- The Close Button for the pop-up windows from menus in game -->
+        
+        <Frame type="Button" name="CloseButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/ScrollableList" pos="Min" offset="0"/>
+            <Width val="30"/>
+            <Style val="StandardButton"/>
+            <Tooltip val="Close Window"/>
+            <Style val="StandardButton"/>
+            <DisplayType val="ImageLayer"/>
+            <ClickSound val="@UI_ActionButtonSelect"/>
+            
+            <Frame type="Image" name="NormalImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <StateCount val="1"/>
+                <LayerCount val="4"/>
+                <Texture val="@UI/CloseButton_Normal" layer="0"/>
+                <Texture val="@UI/CloseButton_Down" layer="1"/>
+                <Texture val="@UI/CloseButton_Down" layer="2"/>
+                <Texture val="@UI/CloseButton_Disabled" layer="3"/>
+                <TextureType val="Normal" layer="0"/>
+                <TextureType val="Normal" layer="1"/>
+                <TextureType val="Normal" layer="2"/>
+                <TextureType val="Normal" layer="3"/>
+                <DesaturateOnDisable val="false"/>
+            </Frame>
+
+            <Frame type="Image" name="HoverImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <StateCount val="1"/>
+                <LayerCount val="4"/>
+                <Texture val="@UI/CloseButton_Hover" layer="0"/>
+                <Texture val="@UI/CloseButton_Down" layer="1"/>
+                <Texture val="@UI/CloseButton_Down" layer="2"/>
+                <Texture val="@UI/CloseButton_Disabled" layer="3"/>
+                <TextureType val="Normal" layer="0"/>
+                <TextureType val="Normal" layer="1"/>
+                <TextureType val="Normal" layer="2"/>
+                <TextureType val="Normal" layer="3"/>
+                <DesaturateOnDisable val="false"/>
+            </Frame>
+        </Frame>
+        
+        <!-- The Minimize Button for the pop-up windows from menus in game  hides the scrollable list -->
+        
+        <Frame type="Button" name="MinButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CloseButton" pos="Min" offset="4"/>
+            <Anchor side="Bottom" relative="$parent/ScrollableList" pos="Min" offset="0"/>
+            <Width val="30"/>
+            <Toggleable val="true"/>
+            <Tooltip val="Minimize Window"/>
+            <Style val="StandardButton"/>
+            <DisplayType val="ImageLayer"/>
+            <ClickSound val="@UI_ActionButtonSelect"/>
+            
+            <Frame type="Image" name="NormalImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <StateCount val="1"/>
+                <LayerCount val="4"/>
+                <Texture val="Assets\Textures\UI_MinButton_Normal.dds" layer="0"/>
+                <Texture val="Assets\Textures\UI_MinButton_Pressed.dds" layer="1"/>
+                <Texture val="Assets\Textures\UI_MinButton_Toggled.dds" layer="2"/>
+                <Texture val="Assets\Textures\UI_MinButton_NormalDisabled.dds" layer="3"/>
+                <TextureType val="Normal" layer="0"/>
+                <TextureType val="Normal" layer="1"/>
+                <TextureType val="Normal" layer="2"/>
+                <TextureType val="Normal" layer="3"/>
+                <DesaturateOnDisable val="false"/>
+            </Frame>
+
+            <Frame type="Image" name="HoverImage">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <StateCount val="1"/>
+                <LayerCount val="4"/>
+                <Texture val="Assets\Textures\UI_MinButton_NormalOver.dds" layer="0"/>
+                <Texture val="Assets\Textures\UI_MinButton_Pressed.dds" layer="1"/>
+                <Texture val="Assets\Textures\UI_MinButton_ToggledOver.dds" layer="2"/>
+                <Texture val="Assets\Textures\UI_MinButton_NormalDisabled.dds" layer="3"/>
+                <TextureType val="Normal" layer="0"/>
+                <TextureType val="Normal" layer="1"/>
+                <TextureType val="Normal" layer="2"/>
+                <TextureType val="Normal" layer="3"/>
+                <DesaturateOnDisable val="false"/>
+            </Frame>
+        </Frame>
+        
+        <!-- The Title for the Frame -->
+        
+        <Frame type="Label" name="WindowTitle">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/MinButton" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/ScrollableList" pos="Min" offset="0"/>
+            <Style val="EditorPropertyButton"/>
+        </Frame>
+        
+        <!-- The Scrollable list for the Frame -->
+        
+        <Frame type="ScrollableFrame" name="ScrollableList">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="30"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Height val="300"/>
+            <Width val="200"/>
+            <AcceptsMouse val="true"/>
+            <PreserveAnchorOffset val="true"/>
+            <CollapseLayout val="true"/>
+    
+            <Frame type="Frame" name="ContainerFrame">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="5"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="2"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Frame type="Image" name="Background">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                    <TextureType val="Border"/>
+                    <Tiled val="true"/>            
+                </Frame>
+                <Height val="100"/>
+            </Frame>
+    
+            <Frame type="ScrollBar" name="ScrollBar">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="2"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-4"/>
+                <Orientation val="Vertical"/>
+                <StepValue val="50"/>
+                <Continuous val="true"/>
+                <Width val="16"/>
+    
+                <Frame type="Image" name="Image">
+                    <Anchor relative="$parent"/>
+                    <Texture val="Assets/Textures/UI_Battlenet_Glue_ChatPanelScrollBarLine.dds"/>
+                    <TextureType val="NineSlice"/>
+                    <Tiled val="true"/>
+                    <Alpha val="0"/>
+                </Frame>
+    
+                <Frame type="Button" name="Button">
+                    <Frame type="Image" name="NormalImage">
+                        <Anchor relative="$parent"/>
+                        <Texture val="@UI/ChatPanelScrollBarGrabber_Normal"/>
+                        <TextureType val="NineSlice"/>
+                        <StateCount val="2"/>
+                        <Tiled val="true"/>
+                    </Frame>
+    
+                    <Frame type="Image" name="HoverImage">
+                        <Anchor relative="$parent"/>
+                        <Texture val="@UI/ChatPanelScrollBarGrabber_Hover"/>
+                        <TextureType val="NineSlice"/>
+                        <StateCount val="2"/>
+                        <Tiled val="true"/>
+                    </Frame>
+                </Frame>
+            </Frame>
+        </Frame>
+        
+        
+        <StateGroup name="Show_Hide">
+            <DefaultState val="Show"/>
+            <State name="Show">
+                <When type="Property" frame="$this/MinButton" Toggled="False"/>
+                <Action type="SetProperty" frame="$this/ScrollableList" visible="true"/>
+                <Action type="SetAnchor" frame="$this" side="Right" relative="$this/ScrollableList" pos="Max" offset="0"/>
+            </State>
+            <State name="Hide">
+                <When type="Property" frame="$this/MinButton" Toggled="True"/>
+                <Action type="SetProperty" frame="$this/ScrollableList" visible="false"/>
+                <Action type="SetAnchor" frame="$this" side="Right" relative="$this" pos="Max" offset="0"/>
+                <Action type="SetProperty" frame="$this" Width="200"/>
+            </State>
+        </StateGroup>
+        
+        <Animation name="Hide">
+            <Event event="OnClick" action="Reset,Play" frame="$this/CloseButton"/>
+         
+            <Controller type="Visibility" end="Pause">
+                <Key type="Bool" time="0" value="False"/>
+            </Controller>
+    </Animation>
+        
+    </Frame>
+</Desc>
