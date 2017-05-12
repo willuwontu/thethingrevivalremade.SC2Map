@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CUser id="Models">
+        <Fields Id="Model" Type="Model" EditorColumn="1"/>
+        <Fields Id="Name" Type="String" EditorColumn="1"/>
+        <Fields Id="Price" Type="Int" EditorColumn="2"/>
+        <Instances Id="[Default]">
+            <Int Int="5000">
+                <Field Id="Price"/>
+            </Int>
+            <Model Model="Marine">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Marine">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="1">
+            <Model Model="Cow">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Cow">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="2">
+            <Model Model="Sheep">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Sheep">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="3">
+            <Model Model="InfestedAbomination">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Aberration">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="4">
+            <Model Model="Marine">
+                <Field Id="Model"/>
+            </Model>
+        </Instances>
+        <Instances Id="5">
+            <Model Model="MurlocMarine">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Murloc Marine">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="6">
+            <Model Model="Reaper">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Reaper">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="7">
+            <Model Model="SiegeTank">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Siege tank">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="8">
+            <Model Model="SiegeBreaker">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Siege breaker">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="9">
+            <Model Model="Thor">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Thor">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="10">
+            <Model Model="Vulture">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Vulture">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="11">
+            <Model Model="SpiderMine">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Spider Mine">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="12">
+            <Model Model="Medic">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Medic">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="13">
+            <Model Model="Marauder">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Marauder">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="14">
+            <Model Model="Nova">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Nova">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="15">
+            <Model Model="Kerrigan">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Kerrigan">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="16">
+            <Model Model="Crate">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Crate">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="17">
+            <Model Model="ColonistSupplyCrate">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Supply Crate">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="18">
+            <Model Model="Bush">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Bush">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="19">
+            <Model Model="Firebat">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Firebat">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="20">
+            <Model Model="Zergling">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Zergling">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="21">
+            <Model Model="Roach">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Roach">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="22">
+            <Model Model="Zealot">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Zealot">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="23">
+            <Model Model="StoneZealot">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Stone Zealot">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="24">
+            <Model Model="PrisonZealot">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Prisoner Zealot">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="25">
+            <Model Model="Civilian">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Civilian">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="26">
+            <Model Model="MedicKillSquad">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Medic Kill Squad">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="27">
+            <Model Model="MedicStetmann">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Medic Stetmann">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="28">
+            <Model Model="Hellion">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Hellion">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance">
+            <Model Model="Barracks">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Barracks">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 2">
+            <Model Model="Factory">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Factory">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 3">
+            <Model Model="FireMedium">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Fire">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 4">
+            <Model Model="Fireworks">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Fireworks">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 5">
+            <Model Model="Balloons">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Balloons">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 6">
+            <Model Model="Queen">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Queen">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 7">
+            <Model Model="Ultralisk">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Ultralisk">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="35">
+            <Model Model="Bunker">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Bunker">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 8">
+            <Model Model="TaurenSpaceMarine">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Tauren Marine">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 9">
+            <Model Model="SpaceDiablo">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Diablo">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 10">
+            <Model Model="Streetlight">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Streetlight">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 11">
+            <Model Model="XilTree">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Xil Tree">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 12">
+            <Model Model="AiurTree">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Aiur Tree">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 13">
+            <Model Model="HavenTree">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Haven Tree">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 14">
+            <Model Model="MarSaraTree">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Mar Sara Tree">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 15">
+            <Model Model="Zeratul">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Zeratul">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 16">
+            <Model Model="Raynor">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Raynor">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 17">
+            <Model Model="Tosh">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Tosh">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 18">
+            <Model Model="Swann">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Rory Swann">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 19">
+            <Model Model="Archon">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Archon">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 20">
+            <Model Model="DarkImmortal">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Dark Immortal">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 21">
+            <Model Model="Immortal">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Immortal">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 22">
+            <Model Model="DarkHighTemplar">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Dark High Templar">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 23">
+            <Model Model="DarkSentry">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Dark Sentry">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 24">
+            <Model Model="Sentry">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Sentry">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 25">
+            <Model Model="HighTemplar">
+                <Field Id="Model"/>
+            </Model>
+            <String String="High Templar">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 26">
+            <Model Model="DarkTemplar">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Dark Templar">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 27">
+            <Model Model="Hydralisk">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Hydralisk">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 28">
+            <Model Model="Tumbleweeds">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Tumbleweeds">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 29">
+            <Model Model="MiningBot">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Mining Bot">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 30">
+            <Model Model="Warbot">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Warbot">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 31">
+            <Model Model="UtilityBot">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Utility Bot">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 32">
+            <Model Model="RedstoneLavaCritter">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Lava Critter">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 33">
+            <Model Model="Infestor">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Infestor">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 34">
+            <Model Model="InfestedTerran">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Infested Terran">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 35">
+            <Model Model="DarkProtossArchon">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Dark Protoss Archon">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 36">
+            <Model Model="DarkProbe">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Dark Probe">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 37">
+            <Model Model="Probe">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Probe">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 38">
+            <Model Model="SCV">
+                <Field Id="Model"/>
+            </Model>
+            <String String="SCV">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 39">
+            <Model Model="Lyote">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Lyote">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 40">
+            <Model Model="Maar">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Maar">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 42">
+            <Model Model="MinimapPing">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Minimap Ping">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 41">
+            <Model Model="TTosh01Lavafall">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Lavafall">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 43">
+            <Model Model="Larva">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Larva">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 44">
+            <Model Model="Drone">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Drone">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 45">
+            <Model Model="Predator">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Predator">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 46">
+            <Model Model="Ghost">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Ghost">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 47">
+            <Model Model="Caboose">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Train">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 48">
+            <Model Model="MinerMale">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Miner Male">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 49">
+            <Model Model="Brutalisk">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Brutalisk">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 50">
+            <Model Model="Lurker">
+                <Field Id="Model"/>
+            </Model>
+            <String String="Lurker">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+        <Instances Id="Untitled Instance 51">
+            <Model Model="MULE">
+                <Field Id="Model"/>
+            </Model>
+            <String String="MULE">
+                <Field Id="Name"/>
+            </String>
+        </Instances>
+    </CUser>
+    <CUser id="MarinePerks">
+        <Fields Id="Perk" Type="Upgrade"/>
+        <Fields Id="Perk name" Type="String" EditorColumn="1"/>
+        <Fields Id="Perk Image" Type="Image" EditorColumn="2"/>
+        <Fields Id="Perk Tooltip" Type="String" EditorColumn="3"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="Juggernaut">
+            <Image Image="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Juggernaut">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="The marine gains more health, but also moves slower">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineJuggernaut">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Sprinter">
+            <Image Image="Assets\Textures\btn-research-terran-microfiltering.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Sprinter">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="Increased movespeed when sprinting.">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineSprinter">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Marathon Man">
+            <Image Image="Assets\Textures\btn-research-zerg-cellularreactor.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Marathon Man">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="Can sprint for longer">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineMarathonMan">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Sixth Sense">
+            <Image Image="Assets\Textures\radaricon2red.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Sixth Sense">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="The marine gains a passive perception to detec the presence of others, friendly or not.">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineSixthSense">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Minigun">
+            <Image Image="Assets\Textures\btn-unit-terran-marinetychus.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Minigun">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="The marine is equipped with a minigun instead, causing it to have a slower attack at the start of combat, but increases as time goes on.">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineMinigun">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Mechanic">
+            <Image Image="Assets\Textures\ui_tipicon_campaign_space01-repair.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Mechanic">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="The marine knows how to fix things, he repairs faster than normal.">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineMechanic">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Coward&apos;s Instincts">
+            <Image Image="Assets\Textures\btn-upgrade-terran-reapernitropacks.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Coward&apos;s Instincts">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="After getting hit, the coward seeks to run away faster, Can only happen once in a while.">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineCowardsInstincts">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Quick Recovery">
+            <Image Image="Assets\Textures\ui_hots_shared_icon_stat_energy.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Quick Recovery">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="The marine is able to recover his energy and health faster.">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineQuickRecovery">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Fuel Efficient">
+            <Image Image="Assets\Textures\flame2.dds">
+                <Field Id="Perk Image"/>
+            </Image>
+            <String String="Fuel Efficient">
+                <Field Id="Perk name"/>
+            </String>
+            <String String="The marine doesn&apos;t use any flamethrower fuel except when he attacks.">
+                <Field Id="Perk Tooltip"/>
+            </String>
+            <Upgrade Upgrade="MarineFuelEfficient">
+                <Field Id="Perk"/>
+            </Upgrade>
+        </Instances>
+    </CUser>
+</Catalog>

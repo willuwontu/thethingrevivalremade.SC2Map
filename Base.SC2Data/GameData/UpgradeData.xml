@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CUpgrade id="AcidBomb">
+        <LeaderAlias value="BurrowCharge"/>
+    </CUpgrade>
+    <CUpgrade id="BurrowCharge"/>
+    <CUpgrade id="ERBurRevealer">
+        <LeaderAlias value="BurrowCharge"/>
+    </CUpgrade>
+    <CUpgrade id="ERDoorExplode">
+        <LeaderAlias value="BurrowCharge"/>
+    </CUpgrade>
+    <CUpgrade id="ERFlamophobic">
+        <LeaderAlias value="BurrowCharge"/>
+    </CUpgrade>
+    <CUpgrade id="ERPounce"/>
+    <CUpgrade id="MarineBurstRifle">
+        <EffectArray Operation="Set" Reference="Weapon,GuassRifle,Effect" Value="MingunBurst"/>
+        <EffectArray Operation="Multiply" Reference="Weapon,GuassRifle,Period" Value="3.000000"/>
+    </CUpgrade>
+    <CUpgrade id="MarineMarathonMan">
+        <EffectArray Reference="Behavior,Stimpack,Duration" Value="5.000000"/>
+        <MaxLevel value="10"/>
+    </CUpgrade>
+    <CUpgrade id="MarineMinigun">
+        <EffectArray Reference="Behavior,attackspeedbuff,Modification.AttackSpeedMultiplier" Value="0.1"/>
+        <EffectArray Operation="Set" Reference="Weapon,GuassRifle,Period" Value="1.000000"/>
+        <MaxLevel value="10"/>
+    </CUpgrade>
+    <CUpgrade id="MarineCowardsInstincts">
+        <EffectArray Reference="Behavior,Adrenaline,Modification.MoveSpeedMultiplier" Value="0.1"/>
+        <MaxLevel value="10"/>
+    </CUpgrade>
+    <CUpgrade id="MarineFuelEfficient"/>
+    <CUpgrade id="MarineSprinter">
+        <EffectArray Reference="Behavior,Stimpack,Modification.MoveSpeedMultiplier" Value="0.15"/>
+        <LeaderAlias value="MarineMarathonMan"/>
+        <MaxLevel value="50"/>
+    </CUpgrade>
+    <CUpgrade id="MarineJuggernaut">
+        <EffectArray Operation="Multiply" Reference="Behavior,BasicMarineBehavior,Modification.MoveSpeedMultiplier" Value="0.87"/>
+        <EffectArray Reference="Behavior,BasicMarineBehavior,Modification.VitalMaxArray[Life]" Value="20"/>
+    </CUpgrade>
+    <CUpgrade id="Isthing" parent="Research"/>
+    <CUpgrade id="MarineQuickRecovery">
+        <EffectArray Operation="Set" Reference="Behavior,BasicMarineBehavior,Modification.VitalRegenArray[Life]" Value="0.050700"/>
+        <EffectArray Reference="Behavior,BasicMarineBehavior,Modification.VitalRegenMultiplier[Energy]" Value="2"/>
+        <EffectArray Reference="Behavior,BasicMarineBehavior,Modification.VitalRegenMultiplier[Life]" Value="2"/>
+        <LeaderAlias value="MarineJuggernaut"/>
+        <MaxLevel value="10"/>
+    </CUpgrade>
+    <CUpgrade id="MarineMechanic">
+        <EffectArray Reference="Effect,Repair,RechargeVitalRate" Value="10"/>
+        <MaxLevel value="10"/>
+    </CUpgrade>
+    <CUpgrade id="MarineSixthSense">
+        <EffectArray Reference="Behavior,BasicMarineBehavior,Modification.Radar" Value="9"/>
+        <MaxLevel value="10"/>
+    </CUpgrade>
+    <CUpgrade id="Muck"/>
+    <CUpgrade id="ParaExp">
+        <LeaderAlias value="BurrowCharge"/>
+    </CUpgrade>
+    <CUpgrade id="Slot1EnableCharge"/>
+    <CUpgrade id="Throw">
+        <LeaderAlias value="BurrowCharge"/>
+    </CUpgrade>
+</Catalog>

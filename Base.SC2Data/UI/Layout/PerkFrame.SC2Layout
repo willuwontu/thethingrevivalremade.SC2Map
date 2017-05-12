@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="Frame" name="PlayerInfoFrame">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+
+        <Frame type="Frame" name="PerkSelectionFrame">
+            <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Width val="50"/>
+            <Height val="50"/>
+            <RenderPriority val="504"/>
+        </Frame>
+
+        <Frame type="Image" name="PerkSelectionBackground">
+            <Anchor side="Top" relative="$parent/PerkSelectionFrame" pos="Min" offset="-26"/>
+            <Anchor side="Bottom" relative="$parent/PerkSelectionFrame" pos="Max" offset="35"/>
+            <Anchor side="Left" relative="$parent/PerkSelectionFrame" pos="Min" offset="-33"/>
+            <Anchor side="Right" relative="$parent/PerkSelectionFrame" pos="Max" offset="32"/>
+            <Texture val="@UI/TimerWindowBackground"/>
+            <TextureType val="Border"/>
+            <RenderPriority val="503"/>
+        </Frame>
+
+        <Frame type="Frame" name="PlayerPerkFrame">
+            <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="35"/>
+            <Width val="50"/>
+            <Height val="50"/>
+            <RenderPriority val="502"/>
+        </Frame>
+
+        <Frame type="Image" name="PlayerPerkbackground">
+            <Anchor side="Top" relative="$parent/PlayerPerkFrame" pos="Min" offset="-26"/>
+            <Anchor side="Bottom" relative="$parent/PlayerPerkFrame" pos="Max" offset="35"/>
+            <Anchor side="Left" relative="$parent/PlayerPerkFrame" pos="Min" offset="-33"/>
+            <Anchor side="Right" relative="$parent/PlayerPerkFrame" pos="Max" offset="32"/>
+            <Texture val="@UI/TimerWindowBackground"/>
+            <TextureType val="Border"/>
+            <RenderPriority val="501"/>
+        </Frame>
+    </Frame>
+</Desc>

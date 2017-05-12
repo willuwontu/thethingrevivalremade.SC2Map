@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CUnit id="DestructibleGateStraightHorizontal">
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <Footprint value="Footprint2x2DoodadBlockLOSHorizontal"/>
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Destructible" value="0"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <EnergyStart value="69"/>
+        <EnergyMax value="69"/>
+        <EnergyRegenRate value="4.6015"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <RepairTime value="65"/>
+        <PushPriority value="99"/>
+        <AlliedPushPriority value="99"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="DestructibleGateStraightHorizontalLowered">
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <Footprint value="Footprint2x2Underground"/>
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="Untargetable" value="0"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Destructible" value="0"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <EnergyStart value="69"/>
+        <EnergyMax value="69"/>
+        <EnergyRegenRate value="4.6015"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <RepairTime value="65"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="DestructibleGateStraightVertical">
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <Footprint value="Footprint2x2DoodadBlockLOSvertical"/>
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Destructible" value="0"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <EnergyStart value="69"/>
+        <EnergyMax value="69"/>
+        <EnergyRegenRate value="4.6015"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <RepairTime value="65"/>
+        <PushPriority value="99"/>
+        <AlliedPushPriority value="99"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="DestructibleGateStraightVerticalLowered">
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="Untargetable" value="0"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Destructible" value="0"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <EnergyStart value="69"/>
+        <EnergyMax value="69"/>
+        <EnergyRegenRate value="4.6015"/>
+        <RepairTime value="65"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <Footprint value="Footprint2x2Underground"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="DestructibleGateStraightVerticalLowered2" parent="DestructibleGateDiagonalBLURLowered">
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="Untargetable" value="0"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Destructible" value="0"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <RepairTime value="25"/>
+        <AbilArray index="0" removed="1"/>
+        <BehaviorArray index="0" removed="1"/>
+        <CardLayouts index="0" removed="1"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <Footprint value="Footprint2x2Underground"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="Flamethrower" parent="ITEM">
+        <FlagArray index="Pawnable" value="1"/>
+        <CostResource index="Minerals" value="10"/>
+        <EditorCategories value="ObjectType:Item,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="FusionCore">
+        <Attributes index="Armored" value="0"/>
+        <Attributes index="Mechanical" value="0"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeArmor value="0"/>
+        <BehaviorArray index="0" removed="1"/>
+        <BehaviorArray index="1" removed="1"/>
+        <FogVisibility value="Visible"/>
+    </CUnit>
+    <CUnit id="Gate" parent="DestructibleGateDiagonalBLURLowered">
+        <Facing value="270"/>
+        <FlagArray index="Movable" value="0"/>
+        <FlagArray index="Untargetable" value="0"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Destructible" value="0"/>
+        <FlagArray index="ShowResources" value="0"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <RepairTime value="25"/>
+        <AbilArray index="0" removed="1"/>
+        <BehaviorArray index="0" removed="1"/>
+        <CardLayouts index="0" removed="1"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <Footprint value="Footprint2x2Underground"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="Grenade" parent="ITEM">
+        <FlagArray index="Pawnable" value="1"/>
+        <Height value="0.1"/>
+        <CostResource index="Minerals" value="10"/>
+        <EditorCategories value="ObjectType:Item,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="Corpse" parent="ITEM">
+        <EditorCategories value="ObjectType:Item,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="InfraredGoggles" parent="ITEM">
+        <Race value="Terr"/>
+        <EditorCategories value=""/>
+        <Item value="Radio2"/>
+    </CUnit>
+    <CUnit id="Molotov" parent="ITEM">
+        <FlagArray index="Pawnable" value="1"/>
+        <Height value="0.5"/>
+        <CostResource index="Minerals" value="10"/>
+        <EditorCategories value="ObjectType:Item,ObjectFamily:Campaign"/>
+        <BehaviorArray Link="MolotovClickAid"/>
+    </CUnit>
+    <CUnit id="HiveMindEmulator">
+        <FogVisibility value="Visible"/>
+        <Attributes index="Armored" value="0"/>
+        <Attributes index="Mechanical" value="0"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <EnergyStart value="0"/>
+        <EnergyMax value="0"/>
+        <EnergyRegenRate value="0"/>
+        <AbilArray index="1" removed="1"/>
+        <BehaviorArray index="0" removed="1"/>
+        <BehaviorArray index="1" removed="1"/>
+        <MinimapRadius value="1.5"/>
+    </CUnit>
+    <CUnit id="InfestedAbomination">
+        <LifeStart value="180"/>
+        <LifeMax value="180"/>
+        <LifeRegenDelay value="7.5"/>
+        <LifeRegenRate value="1.5"/>
+        <EnergyStart value="800"/>
+        <EnergyMax value="800"/>
+        <EnergyRegenDelay value="7.5"/>
+        <EnergyRegenRate value="14"/>
+        <Speed value="2.6992"/>
+        <Sight value="13"/>
+        <AbilArray Link="QueenBuild2"/>
+        <AbilArray Link="QueenBuild22"/>
+        <AbilArray Link="QueenBuild2211"/>
+        <AbilArray Link="QueenBuild222"/>
+        <AbilArray Link="QueenBuild2212"/>
+        <AbilArray Link="QueenBuild2213"/>
+        <AbilArray Link="QueenBuild2214"/>
+        <AbilArray Link="QueenBuild223"/>
+        <AbilArray Link="QueenBuild224"/>
+        <AbilArray Link="QueenBuild225"/>
+        <AbilArray Link="QueenBuild226"/>
+        <AbilArray Link="QueenBuild227"/>
+        <AbilArray Link="QueenBuild228"/>
+        <AbilArray Link="QueenBuild229"/>
+        <AbilArray Link="QueenBuild2210"/>
+        <AbilArray Link="Throw"/>
+        <AbilArray Link="ThingConsume"/>
+        <AbilArray Link="MeatHook"/>
+        <BehaviorArray Link="TheThingSensory"/>
+        <BehaviorArray Link="Oxygendamage"/>
+        <BehaviorArray Link="Aura"/>
+        <BehaviorArray Link="SandstormEffect"/>
+        <BehaviorArray Link="ConsumeBurnDisrupt"/>
+        <BehaviorArray Link="Frenzy2"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="3" Column="3"/>
+            <LayoutButtons index="4" Face="BurrowDown" AbilCmd="BurrowInfestedAbominationDown,Execute" Row="1" Column="4"/>
+            <LayoutButtons index="5" Face="InfestedAbomination22" Type="Submenu" AbilCmd="move,HoldPos" SubmenuCardId="0003" SubmenuFullSubCmdValidation="1"/>
+            <LayoutButtons index="6" Face="Throw" Type="AbilCmd" AbilCmd="Throw,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="PrimalConsume" Type="AbilCmd" AbilCmd="ThingConsume,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="MeatHook" Type="AbilCmd" AbilCmd="MeatHook,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons>
+                <Face value="Blue"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="QueenBuild2,Build1"/>
+                <Requirements value="Player1Dead"/>
+                <Row value="0"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Green" Type="AbilCmd" AbilCmd="QueenBuild22,Build1" Row="0" Column="1"/>
+            <LayoutButtons Face="Red" Type="AbilCmd" AbilCmd="QueenBuild2211,Build1" Row="0" Column="2"/>
+            <LayoutButtons Face="LightBlue" Type="AbilCmd" AbilCmd="QueenBuild222,Build1" Row="0" Column="3"/>
+            <LayoutButtons Face="LightGreen" Type="AbilCmd" AbilCmd="QueenBuild2212,Build1" Row="0" Column="4"/>
+            <LayoutButtons Face="LightRed" Type="AbilCmd" AbilCmd="QueenBuild2213,Build1" Row="1" Column="0"/>
+            <LayoutButtons>
+                <Face value="DarkBlue"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="QueenBuild2214,Build1"/>
+                <Requirements value="DistortionSensorsResearched"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="DarkGreen" Type="AbilCmd" AbilCmd="QueenBuild223,Build1" Row="1" Column="2"/>
+            <LayoutButtons Face="DarkRed" Type="AbilCmd" AbilCmd="QueenBuild224,Build1" Row="1" Column="3"/>
+            <LayoutButtons Face="Yellow" Type="AbilCmd" AbilCmd="QueenBuild225,Build1" Row="1" Column="4"/>
+            <LayoutButtons Face="LightYellow" Type="AbilCmd" AbilCmd="QueenBuild226,Build1" Row="2" Column="0"/>
+            <LayoutButtons Face="DarkYellow" Type="AbilCmd" AbilCmd="QueenBuild227,Build1" Row="2" Column="1"/>
+            <LayoutButtons Face="Purple" Type="AbilCmd" AbilCmd="QueenBuild228,Build1" Row="2" Column="2"/>
+            <LayoutButtons Face="Gray" Type="AbilCmd" AbilCmd="QueenBuild229,Build1" Row="2" Column="3"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons>
+                <Face value="ColorSelection"/>
+                <Type value="Submenu"/>
+                <SubmenuCardId value="0002"/>
+                <SubmenuFullSubCmdValidation value="1"/>
+                <Row value="0"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons Face="PreviousColor" Type="AbilCmd" AbilCmd="stop,Dance" Row="0" Column="1"/>
+            <LayoutButtons Face="LastConsumed" Type="AbilCmd" AbilCmd="stop,HoldFire" Row="0" Column="2"/>
+            <LayoutButtons Face="OriginalColor" Type="AbilCmd" AbilCmd="stop,Cheer" Row="0" Column="3"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <MinimapRadius value="0"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="InfestedAbominationBurrowed">
+        <FlagArray index="Unselectable" value="1"/>
+        <LifeStart value="300"/>
+        <LifeMax value="300"/>
+        <LifeRegenDelay value="0.5"/>
+        <LifeRegenRate value="1.5"/>
+        <EnergyStart value="800"/>
+        <EnergyMax value="800"/>
+        <EnergyRegenRate value="-10"/>
+        <Speed value="1.1992"/>
+        <Acceleration value="3"/>
+        <LateralAcceleration value="46"/>
+        <Sight value="1"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="ThingBurrowCharge"/>
+        <BehaviorArray Link="TheThingSensory"/>
+        <BehaviorArray Link="Unburrow"/>
+        <BehaviorArray Link="Oxygendamage"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestedAbominationUp,Execute" Row="1" Column="4"/>
+            <LayoutButtons Face="BurrowedCharge" Type="AbilCmd" AbilCmd="ThingBurrowCharge,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="Marine">
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <Attributes index="Light" value="0"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="0"/>
+        <LifeStart value="50"/>
+        <LifeMax value="50"/>
+        <LifeRegenDelay value="30"/>
+        <LifeRegenRate value="0.25"/>
+        <EnergyStart value="10"/>
+        <EnergyMax value="10"/>
+        <EnergyRegenDelay value="5"/>
+        <EnergyRegenRate value="0.1992"/>
+        <Sight value="10"/>
+        <AbilArray Link="LockDoor"/>
+        <AbilArray Link="LockDoor2"/>
+        <AbilArray Link="MarineInventory"/>
+        <AbilArray Link="ToggleFlamethrower"/>
+        <AbilArray Link="Wrenchhealdoor"/>
+        <BehaviorArray Link="TheThingSensory2"/>
+        <BehaviorArray Link="Oxygendamage"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2" Face="Attack" AbilCmd="attack,Execute" Column="3"/>
+            <LayoutButtons index="3" Face="Stim" AbilCmd="Stimpack,Execute" Row="2" Column="0"/>
+            <LayoutButtons index="4" Face="InfestedAbomination2222" AbilCmd="LockDoor,Execute" Row="1" Column="0"/>
+            <LayoutButtons index="5" Face="MoveHoldPosition" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="ActivateFlamethrower" Type="AbilCmd" AbilCmd="ToggleFlamethrower,On" Row="1" Column="1"/>
+            <LayoutButtons Face="DeactivateFlamethrower" Type="AbilCmd" AbilCmd="ToggleFlamethrower,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="QuickDrop" Type="AbilCmd" AbilCmd="LockDoor2,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="Wrenchhealdoor,Execute" Row="1" Column="2"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Marine2" parent="Marine">
+        <Name value="Unit/Name/Marine2"/>
+        <LifeRegenRate value="0.1992"/>
+        <AbilArray Link="LockDoor"/>
+        <AbilArray Link="LockDoor2"/>
+        <AbilArray Link="ToggleFlamethrower"/>
+        <AbilArray Link="PsiStorm2"/>
+        <AbilArray Link="TransformtoThing"/>
+        <AbilArray Link="Wrenchhealdoor"/>
+        <AbilArray Link="ThrowMolotov"/>
+        <AbilArray Link="Burn"/>
+        <BehaviorArray index="0" Link="BasicMarineBehavior"/>
+        <BehaviorArray index="1" Link="TheThingSensory2"/>
+        <BehaviorArray Link="Flashlight"/>
+        <BehaviorArray Link="ReducedVision"/>
+        <BehaviorArray Link="SandstormEffect"/>
+        <BehaviorArray Link="ConsumeBurnDisrupt"/>
+        <BehaviorArray Link="Oxygen"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="DeactivateFlamethrower" Type="AbilCmd" AbilCmd="ToggleFlamethrower,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="ActivateFlamethrower" Type="AbilCmd" AbilCmd="ToggleFlamethrower,On" Row="1" Column="1"/>
+            <LayoutButtons>
+                <Face value="QuickDrop"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="LockDoor2,Execute"/>
+                <Requirements value="UseCombatShield"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="Wrenchhealdoor,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="Wrenchhealdoor,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="InfestedAbomination2" Type="AbilCmd" AbilCmd="TransformtoThing,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="ThrowGrenade" Type="AbilCmd" AbilCmd="PsiStorm2,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="ThrowMolotov" Type="AbilCmd" AbilCmd="ThrowMolotov,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Burn" Type="AbilCmd" AbilCmd="Burn,Execute" Row="2" Column="2"/>
+            <LayoutButtons>
+                <Face value="MoraleBoost"/>
+                <Type value="Passive"/>
+                <Behavior value="MoraleBoost"/>
+                <Requirements value="HasMoraleBoost"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <LifeRegenDelay value="8"/>
+        <FlagArray index="Unhighlightable" value="0"/>
+        <MinimapRadius value="0"/>
+        <LifeStart value="60"/>
+        <LifeMax value="60"/>
+    </CUnit>
+    <CUnit id="Marine3" parent="Marine">
+        <Name value="Unit/Name/Marine3"/>
+        <LifeRegenRate value="0.1992"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="DeactivateFlamethrower" Type="AbilCmd" AbilCmd="ToggleFlamethrower,Off" Row="1" Column="1"/>
+            <LayoutButtons Face="ActivateFlamethrower" Type="AbilCmd" AbilCmd="ToggleFlamethrower,On" Row="1" Column="1"/>
+            <LayoutButtons>
+                <Face value="QuickDrop"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="LockDoor2,Execute"/>
+                <Requirements value="UseCombatShield"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="Wrenchhealdoor,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="Wrenchhealdoor,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="ThrowGrenade" Type="AbilCmd" AbilCmd="PsiStorm2,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="ThrowMolotov" Type="AbilCmd" AbilCmd="ThrowMolotov,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Burn" Type="AbilCmd" AbilCmd="Burn,Execute" Row="2" Column="2"/>
+            <LayoutButtons>
+                <Face value="MoraleBoost"/>
+                <Type value="Passive"/>
+                <Behavior value="MoraleBoost"/>
+                <Requirements value="HasMoraleBoost"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <AbilArray Link="LockDoor"/>
+        <AbilArray Link="LockDoor2"/>
+        <AbilArray Link="ToggleFlamethrower"/>
+        <AbilArray Link="PsiStorm2"/>
+        <AbilArray Link="Wrenchhealdoor"/>
+        <AbilArray Link="ThrowMolotov"/>
+        <AbilArray Link="Burn"/>
+        <BehaviorArray index="1" Link="Flashlight"/>
+        <BehaviorArray Link="ReducedVision"/>
+        <BehaviorArray Link="SandstormEffect"/>
+        <BehaviorArray Link="ConsumeBurnDisrupt"/>
+        <BehaviorArray Link="Oxygen"/>
+        <LifeRegenDelay value="8"/>
+        <FlagArray index="Unhighlightable" value="0"/>
+        <MinimapRadius value="0"/>
+        <LifeStart value="60"/>
+        <LifeMax value="60"/>
+    </CUnit>
+    <CUnit id="Medkit" parent="ITEM">
+        <EditorCategories value="ObjectType:Item,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="Radio" parent="ITEM">
+        <FlagArray index="Pawnable" value="1"/>
+        <CostResource index="Minerals" value="10"/>
+        <EditorCategories value="ObjectType:Item,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="RiotShield" parent="ITEM">
+        <Race value="Terr"/>
+        <EditorCategories value=""/>
+    </CUnit>
+    <CUnit id="BeaconRelay">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Visible"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Food value="8"/>
+        <CostCategory value="Economy"/>
+        <CostResource index="Minerals" value="100"/>
+        <RepairTime value="30"/>
+        <AttackTargetPriority value="11"/>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="Lower" Type="AbilCmd" AbilCmd="SupplyDepotLower,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="1"/>
+        <SeparationRadius value="1"/>
+        <Footprint value="Footprint1x1"/>
+        <PlacementFootprint value="Footprint1x1"/>
+        <ScoreMake value="100"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <TacticalAI value="SupplyDepot"/>
+        <TechAliasArray value="Alias_SupplyDepot"/>
+        <GlossaryPriority value="10"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+    </CUnit>
+    <CUnit id="FuelStation">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Terr"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Visible"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <Attributes index="Summoned" value="1"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <CostResource index="Minerals" value="200"/>
+        <RepairTime value="20"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="1"/>
+        <SeparationRadius value="2"/>
+        <Footprint value="Footprint4x4Contour"/>
+        <PlacementFootprint value="Footprint4x4"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="Wrench" parent="ITEM">
+        <EditorCategories value="ObjectFamily:Campaign,ObjectType:Item"/>
+        <Facing value="307.5622"/>
+        <Height value="0.25"/>
+    </CUnit>
+    <CUnit id="MeatHookMissile" parent="MISSILE_INVULNERABLE">
+        <Race value="Zerg"/>
+        <EditorCategories value=""/>
+    </CUnit>
+</Catalog>

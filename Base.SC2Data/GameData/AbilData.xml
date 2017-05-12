@@ -1,0 +1,2332 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CAbilEffectTarget id="ThingConsume">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="Consume"/>
+        <Cost>
+            <Charge Link="Abil/Consume"/>
+            <Cooldown Link="Abil/Consume" Location="Player" TimeUse="8"/>
+        </Cost>
+        <Range value="0.25"/>
+        <PrepTime value="2"/>
+        <CastIntroTime value="0"/>
+        <CastOutroTime value="0"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Consume"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Burn">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Range value="1"/>
+        <PrepTime value="1.5"/>
+        <CastIntroTime value="0"/>
+        <CastOutroTime value="0"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Burn" Requirements="HasFire"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ERAcidBomb">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="AcidBomb"/>
+        <TargetFilters value="Ground,Visible;Self,Player,Ally,Neutral,Massive,Destructible,Item,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <AINotifyEffect value="AcidBomb"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AcidBomb" Requirements="IsSlot4AcidBomb"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilMorph id="BurrowInfestedAbominationUp">
+        <InfoArray index="0" Unit="InfestedAbomination" RandomDelayMax="0">
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.25"/>
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="1"/>
+                <EffectArray index="Start" value="UnburrowSearch"/>
+            </SectionArray>
+        </InfoArray>
+        <Flags index="WaitUntilStopped" value="0"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="ThingBurrowCharge">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ChargeMover"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <Location value="Player"/>
+                <TimeUse value="30"/>
+            </Charge>
+            <Cooldown Location="Player"/>
+        </Cost>
+        <Range value="10"/>
+        <CursorEffect value="BChargeSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowedCharge" Requirements="BurrowCharge"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="DestructibleGateStraightHorizontal">
+        <InfoArray index="0" Unit="DestructibleGateStraightHorizontal">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+        <Flags index="Automatic" value="1"/>
+        <ValidatorArray value="DoorLockValidation"/>
+    </CAbilMorph>
+    <CAbilMorph id="DestructibleGateStraightHorizontalLowered">
+        <InfoArray index="0" Unit="DestructibleGateStraightHorizontalLowered">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.25"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0"/>
+            </SectionArray>
+        </InfoArray>
+        <Flags index="Automatic" value="1"/>
+        <ValidatorArray value="DoorOpen"/>
+        <ValidatorArray value="NotMaxEnergy2"/>
+    </CAbilMorph>
+    <CAbilMorph id="DestructibleGateStraightVertical">
+        <InfoArray index="0" Unit="DestructibleGateStraightVertical">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.25"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.25"/>
+            </SectionArray>
+        </InfoArray>
+        <Flags index="Automatic" value="1"/>
+        <ValidatorArray value="DoorLockValidation"/>
+    </CAbilMorph>
+    <CAbilMorph id="DestructibleGateStraightVerticalLowered">
+        <InfoArray index="0" Unit="DestructibleGateStraightVerticalLowered">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.25"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="0"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0"/>
+            </SectionArray>
+        </InfoArray>
+        <Flags index="Automatic" value="1"/>
+        <ValidatorArray value="DoorOpen"/>
+        <ValidatorArray value="NotMaxEnergy2"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="ERPounce">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ERPounceCaster"/>
+        <Cost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="Abil/Throw"/>
+                <TimeStart value="1"/>
+                <TimeUse value="10"/>
+            </Charge>
+            <Cooldown Link="Abil/Throw" TimeUse="3"/>
+        </Cost>
+        <Range value="8"/>
+        <Marker Link="Abil/Throw"/>
+        <CursorEffect value="ThrowLandSearch"/>
+        <AINotifyEffect value="Throw"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ERPounce" Requirements="ERPounce"/>
+        <TargetFilters value="Ground,Visible;Self,Player,Ally,Neutral,Massive,Destructible,Item,Dead,Hidden,Invulnerable"/>
+    </CAbilEffectTarget>
+    <CAbilInventory id="MarineInventory">
+        <TargetFilters value="Item;-"/>
+        <Range value="0.05"/>
+        <MaxDropRange value="0.25"/>
+        <InfoArray/>
+        <InfoArray/>
+        <InfoArray/>
+        <InfoArray/>
+    </CAbilInventory>
+    <CAbilEffectInstant id="LockDoor">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ERDoorLockSearch"/>
+        <Cost>
+            <Charge Link="Abil/ToggleFlamethrower"/>
+            <Cooldown Link="Yamato" Location="Player" TimeUse="60"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="LockDoor2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" removed="1"/>
+        <Cost>
+            <Charge Link="Abil/ToggleFlamethrower"/>
+            <Cooldown Link="Yamato"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="ThrowMolotov">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ArtanisBeamPersistent"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/PsiStorm"/>
+            <Cooldown Link="Abil/PsiStorm" TimeUse="0.1"/>
+        </Cost>
+        <Range value="9"/>
+        <CastOutroTime value="0.1"/>
+        <CursorEffect value="PsiStormSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ThrowMolotov"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel">
+            <Flags index="ShowInGlossary" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilInventory id="ThingInventory">
+        <CmdButtonArray index="ItemInstant" DefaultButtonFace="Dance"/>
+        <TargetFilters value="Item;-"/>
+        <InfoArray/>
+        <InfoArray/>
+        <InfoArray/>
+    </CAbilInventory>
+    <CAbilEffectTarget id="Muck">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="LaunchMuck"/>
+        <Cost>
+            <Charge CountMax="3" CountStart="3" CountUse="1"/>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <Range value="5"/>
+        <CursorEffect value="MuckSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Muck" Requirements="IsSlot5Muck"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ObliterateDoor">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ERDamageDoor"/>
+        <Cost>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <TargetFilters value="Structure;Player,Ally,Enemy,Dead"/>
+        <Range value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ERObliterateDoor" Requirements="ERDoorExplode"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ParasiticImplosion">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ParasiteLM"/>
+        <Cost>
+            <Charge CountMax="5" CountStart="5" CountUse="1"/>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <TargetFilters value="Ground,Visible;Self,Player,Ally,Neutral,Massive,Destructible,Item,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ParasiticExplosion" Requirements="IsSlot3ParaExp"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PsiStorm2">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ArtanisBeamPersistent"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/PsiStorm"/>
+            <Cooldown Link="Abil/PsiStorm" TimeUse="0.1"/>
+        </Cost>
+        <Range value="9"/>
+        <CastOutroTime value="0.1"/>
+        <CursorEffect value="PsiStormSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ThrowGrenade"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel">
+            <Flags index="ShowInGlossary" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilBuild id="QueenBuild2">
+        <Name value="Player1Color"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild22">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player2Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild2210">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player15Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild2211">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player3Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild2212">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player5Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild2213">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player6Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild2214">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player7Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild222">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player4Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild223">
+        <Name value="Player8Color"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild224">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player9Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild225">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player10Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild226">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player11Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild227">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player12Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild228">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player13Color"/>
+    </CAbilBuild>
+    <CAbilBuild id="QueenBuild229">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <FlagArray index="BestUnit" value="0"/>
+        <FlagArray index="Cancelable" value="0"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <Alert value=""/>
+        <InfoArray index="Build1" Unit="CreepTumor" Delay="2">
+            <Resource index="Custom" value="999"/>
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+            <Button DefaultButtonFace="CreepTumor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build3" Time="30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Charge Link="Abil/QueenBuild"/>
+            <Cooldown Link="Abil/QueenBuild"/>
+        </InfoArray>
+        <Name value="Player14Color"/>
+    </CAbilBuild>
+    <CAbilEffectInstant id="Stimpack">
+        <Cost index="0">
+            <Vital index="Life" value="0"/>
+            <Vital index="Energy" value="10"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="Throw">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="ThrowSet"/>
+        <Cost>
+            <Charge>
+                <CountMax value="4"/>
+                <CountStart value="4"/>
+                <CountUse value="1"/>
+                <Location value="Player"/>
+                <TimeUse value="30"/>
+            </Charge>
+            <Cooldown Location="Player" TimeUse="8"/>
+        </Cost>
+        <Range value="12"/>
+        <CursorEffect value="ThrowLandSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Throw" Requirements="IsSlot2Throw"/>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="ToggleFlamethrower">
+        <AbilSetId value="Flame"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="ActivateFlamethrower">
+            <Flags index="ShowInGlossary" value="0"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="DeactivateFlamethrower"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <BehaviorArray value="FlamethrowerDummy"/>
+    </CAbilBehavior>
+    <CAbilEffectInstant id="TransformtoThing">
+        <Cost>
+            <Cooldown Location="Player" TimeUse="5"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="InfestedAbomination2" Requirements="Isthing"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="Wrenchhealdoor" parent="Repair">
+        <Name value="Abil/Name/Wrenchhealdoor"/>
+        <Flags index="AutoCast" value="0"/>
+        <TargetFilters index="0" value="Structure,Visible;Self,Enemy,Mechanical,Missile,UnderConstruction,Dead,Hidden"/>
+        <CmdButtonArray index="Execute" Requirements="Haswrench"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Yoink">
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Charge Location="Player"/>
+            <Cooldown Location="Player" TimeUse="45"/>
+        </Cost>
+        <TargetFilters index="0" value="Item;Self,Structure,Heroic,Missile,Destructible,Stasis,Dead,Hidden"/>
+        <Range index="0" value="16"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MeatHook">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="MeatHookInitial"/>
+        <Flags index="RangeUseCasterRadius" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="3"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <Location value="Player"/>
+                <TimeUse value="48"/>
+            </Charge>
+            <Cooldown Location="Player" TimeUse="16"/>
+        </Cost>
+        <Range value="16"/>
+        <AutoCastFilters value="-;Player,Ally"/>
+        <PrepTime value="0"/>
+        <FinishTime value="0.5"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MeatHook"/>
+    </CAbilEffectTarget>
+</Catalog>

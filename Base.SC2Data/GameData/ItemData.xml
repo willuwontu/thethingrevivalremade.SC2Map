@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CItem id="Flamethrower">
+        <Flags index="DropOnDeath" value="1"/>
+        <Flags index="KillWhenDepleted" value="1"/>
+        <Class value="Gun"/>
+        <Face value="ActivateFlamethrower"/>
+        <CarryBehaviorArray value="FlameThrower"/>
+        <CarryBehaviorArray value="HasFlameThrower"/>
+    </CItem>
+    <CItem id="Grenade">
+        <Face value="ItemGrenades"/>
+        <Flags index="DropOnDeath" value="1"/>
+        <Flags index="KillWhenDepleted" value="1"/>
+        <Class value="Relic"/>
+        <CarryBehaviorArray value="HasGrenade"/>
+        <CarryBehaviorArray value="Fire"/>
+    </CItem>
+    <CItemEffectTarget id="Medkit" parent="HealingPotionTEST">
+        <Face value="Medkit"/>
+        <Flags index="DropOnDeath" value="1"/>
+        <Effect value="Medkit"/>
+        <EffectCost>
+            <Charge CountMax="1" CountStart="1"/>
+            <Cooldown TimeUse="0"/>
+        </EffectCost>
+        <TargetFilters value="-;Neutral,Enemy,Mechanical,Structure,Dead"/>
+        <Range value="0.75"/>
+    </CItemEffectTarget>
+    <CItem id="Molotov">
+        <Face value="HybridCPlasmaBlast"/>
+        <Flags index="DropOnDeath" value="1"/>
+        <Flags index="KillWhenDepleted" value="1"/>
+        <Class value="Relic"/>
+        <CarryBehaviorArray value="HasMolotov"/>
+        <CarryBehaviorArray value="Fire"/>
+    </CItem>
+    <CItem id="Radio">
+        <Flags index="DropOnDeath" value="1"/>
+        <Flags index="KillWhenDepleted" value="1"/>
+        <Class value="Relic"/>
+    </CItem>
+    <CItem id="Radio2">
+        <Face value="InfraredGoggles"/>
+        <Flags index="DropOnDeath" value="1"/>
+        <Flags index="KillWhenDepleted" value="1"/>
+        <Class value="Relic"/>
+        <CarryBehaviorArray value="InfraredGoggles"/>
+    </CItem>
+    <CItem id="RiotShield">
+        <Flags index="DropOnDeath" value="1"/>
+        <Flags index="KillWhenDepleted" value="1"/>
+        <Class value="Shield"/>
+        <CarryBehaviorArray value="RiotShield"/>
+    </CItem>
+    <CItem id="Wrench">
+        <Class value="Scroll"/>
+        <CarryBehaviorArray value="HasWrench"/>
+    </CItem>
+</Catalog>

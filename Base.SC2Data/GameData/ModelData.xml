@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CModelFoliage id="AcidBombEffect">
+        <Model value="Assets\Effects\Zerg\CorruptedMissile\CorruptedMissile.m3"/>
+        <Lighting value="ParasiteHeadModel"/>
+    </CModelFoliage>
+    <CModelFoliage id="AcidBombImpact">
+        <Model value="Assets\Effects\Zerg\BioPlasmaMissileImpact\BioPlasmaMissileImpact.m3"/>
+    </CModelFoliage>
+    <CModel id="BattleNetGlue">
+        <Model value="Assets\UI\Glues\MainMenuSpace\MainMenuSpace.m3"/>
+    </CModel>
+    <CModel id="BloodSplats">
+        <LowQualityModel value="BloodSplats"/>
+    </CModel>
+    <CModelFoliage id="ERChargeBuff">
+        <Model value="Assets\Effects\Zerg\FrenzyMissile\FrenzyMissile.m3"/>
+        <Lighting value="ParasiteHeadModel"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModelFoliage>
+    <CModel id="ERDoorExplosion">
+        <Model value="Assets\Effects\Zerg\BioStasisMissileImpact\BioStasisMissileImpact.m3"/>
+        <Flags index="Download" value="0"/>
+    </CModel>
+    <CModel id="FlamethrowerOwnership" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.000000,0.100000,1.000000"/>
+        <ScaleMin value="1.000000,0.100000,1.000000"/>
+    </CModel>
+    <CModel id="FlamethrowerReady" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Flashlight" parent="Doodad">
+        <Model value="Assets\Doodads\Floodlight\Floodlight_03.m3"/>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Stand,00"/>
+            <Name value="DoodadFloodlight01"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+            <Payload value="Doodad_Floodlight01"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Stand,00"/>
+            <Name value="DoodadFloodlight01"/>
+            <Type value="Sound"/>
+            <Time value="6.000000"/>
+            <Payload value="Doodad_Floodlight01"/>
+        </Events>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="GroundExplosion">
+        <Model value="Assets\Effects\Terran\ArcadeMegaBombImpact\ArcadeMegaBombImpact.m3"/>
+        <Lighting value="Muck"/>
+    </CModel>
+    <CModel id="GroundRupture">
+        <Model value="Assets\Effects\Zerg\SymbioteImpact\SymbioteImpact.m3"/>
+        <Lighting value="Muck"/>
+    </CModel>
+    <CModelFoliage id="Gun"/>
+    <CModel id="LightOmniWhiteLarge">
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <!--CModel id="MarineFootprint" parent="OneShotSpellFX">-->
+    <!--        <Occlusion value="Show"/>-->
+    <!--        <Model value="Assets\Effects\Terran\ThorFootPrint\ThorFootPrint.m3"/>-->
+    <!--        <VariationCount value="4"/>-->
+    <!--        <EditorCategories value="Race:Terran"/>-->
+    <!--    </CModel-->
+    <CModel id="Marine">
+        <SelectionOffset value="0.000000,0.000000,999.000000"/>
+        <SelectionRadius value="0.000000"/>
+    </CModel>
+    <CModel id="MarineCorpse">
+        <Priority value="8"/>
+        <Radius value="0.100000"/>
+        <SelectionRadius value="0.100000"/>
+    </CModel>
+    <CModel id="MouthSpewEffect">
+        <Model value="Assets\Effects\Zerg\RoachWeaponLaunch\RoachWeaponLaunch.m3"/>
+        <Lighting value="Muck"/>
+    </CModel>
+    <CModel id="Muck">
+        <Model value="Assets\Effects\Zerg\ConstrictingSlimeLaunch\ConstrictingSlimeLaunch.m3"/>
+    </CModel>
+    <CModel id="ParasiteExplosion">
+        <Model value="Assets\Effects\Zerg\BioStasisMissileImpact\BioStasisMissileImpact.m3"/>
+        <Flags index="Download" value="0"/>
+    </CModel>
+    <CModelFoliage id="ParasiteHeadModel">
+        <Model value="Assets\Effects\Zerg\NeuralParasite\NeuralParasite.m3"/>
+    </CModelFoliage>
+    <CModel id="PlanetViewSigmaQuadrant">
+        <Model value="Assets\UI\Starmap\PlanetViews\PlanetViewAlbion\PlanetViewAlbion.m3"/>
+    </CModel>
+    <CModel id="WindyAsh">
+        <LowQualityModel value="WindyAsh"/>
+    </CModel>
+    <CModel id="Wrench">
+        <Model value="Wrench.m3"/>
+    </CModel>
+    <CModel id="MeatHook">
+        <Model value="Assets\Effects\Zerg\RoachTentacleMissile\RoachTentacleMissile.m3"/>
+    </CModel>
+</Catalog>

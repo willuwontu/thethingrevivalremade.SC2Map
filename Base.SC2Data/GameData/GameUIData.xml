@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CGameUI id="Dflt">
+        <MinimapData>
+            <OuterBorderColor value="0,0,0,0"/>
+            <FrustumColor value="255,0,255,0"/>
+            <BackGroundColor value="0,0,0,0"/>
+            <BorderSize value="0.000000"/>
+        </MinimapData>
+        <SelectionColors index="Subgroup" value="0,255,255,255"/>
+        <SelectionColors index="Selected" value="0,255,255,255"/>
+        <SelectionColors index="Ally" value="0,255,255,255"/>
+        <SelectionColors index="Enemy" value="0,255,255,255"/>
+    </CGameUI>
+</Catalog>

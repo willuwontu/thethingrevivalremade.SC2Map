@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CBehaviorBuff id="AcidSlowBurn">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-fungalgrowth-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <Duration value="5"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="AcidicBurn"/>
+        <Modification MoveSpeedMultiplier="0.75"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Adrenaline">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="Noadrenalineused"/>
+        <Duration value="2"/>
+        <ExpireEffect value="adrenalineused"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Adrenlaineused">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BasicMarineBehavior">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification RadarFilters="-;Structure,Item,Buried">
+            <WeaponArray/>
+            <WeaponDisableArray value="SJBattlecruiser"/>
+        </Modification>
+        <DamageResponse Handled="adrenaline"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Buried">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedMaximum="0">
+            <StateFlags index="Bury" value="1"/>
+            <StateFlags index="Cloak" value="1"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurrowRevealer">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BurrowedSurveilance">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ERBurreveal"/>
+        <Modification SightBonus="5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Carried">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorAttribute id="ChargeAdded">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorAttribute>
+    <CBehaviorBuff id="Charging2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <FinalEffect value="ERChargeDestPerst"/>
+        <ExpireEffect value="ERChargeDestPerst"/>
+        <Modification MoveSpeedMultiplier="1.5">
+            <StateFlags index="Uncommandable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ConsumeBurnDisrupt">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse Chance="1" Handled="Disrupt"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Disrupt">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <Modification>
+            <AbilLinkDisableArray value="Consume"/>
+            <AbilLinkDisableArray value="Burn"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Fire">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FlamOPhobic">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification MoveSpeedMultiplier="1.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FlameThrower">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FlamethrowerDummy"/>
+    <CBehaviorBuff id="Aura">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HasFlameThrower">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HasGrenade">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HasMolotov">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InfraredGoggles">
+        <InfoIcon value="Assets\Textures\btn-status-radar.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification DetectBonus="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Medkit">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="30"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MolotovClickAid">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FummyFireBehavior">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="ERFlamophobic"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Grapple">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="4"/>
+        <Modification MoveSpeedMinimum="0.1015" MoveSpeedBonus="-1" AttackSpeedMultiplier="0.25"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HasWrench">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="IncapStandUp">
+        <ExpireEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Incapacitated">
+        <ExpireEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Lessoxygen">
+        <Cost>
+            <Charge Link="Behavior/Moreoxygen"/>
+            <Cooldown Link="Behavior/Moreoxygen"/>
+        </Cost>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="Oxygenmin"/>
+        <DisableValidatorArray value="OxygenEnumarearemove"/>
+        <Period value="1"/>
+        <PeriodicEffect value="oxygenswitch"/>
+        <Modification>
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/Moreoxygen"/>
+                    <Cooldown Link="Behavior/Moreoxygen"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/Moreoxygen"/>
+                <Cooldown Link="Behavior/Moreoxygen"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MoraleBoost">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="noflamethrower"/>
+        <Duration value="20"/>
+        <Modification MoveSpeedMultiplier="1.35" Detect="2">
+            <DamageDealtAttributeMultiplier index="Biological" value="0.1"/>
+            <VitalRegenArray index="Life" value="0.1992"/>
+            <VitalRegenArray index="Energy" value="0.1992"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MuckSlow">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-fungalgrowth-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <Duration value="3"/>
+        <Modification MoveSpeedMultiplier="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Oxygen">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="1"/>
+        <PeriodicEffect value="OxygenSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OxygenAura">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="16"/>
+        <MaxStackCountPerCaster value="1"/>
+        <Duration value="1"/>
+        <Period value="0.0625"/>
+        <PeriodCount value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Oxygendamage">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="Nooxygen"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="Oxygendamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PermanentlyBuried">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
+        <Modification>
+            <StateFlags index="Bury" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PlayerProximity">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\BTN-Ability-Protoss-CloakField.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Period value="0.2"/>
+        <PeriodicEffect value="PlayerProximitySearch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PlayerProximityEffect">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-cloakfield.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="NotMothership2"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="0.5417"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReducedVision">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification SightMaximum="6.5"/>
+        <DisableValidatorArray value="HasNoInfraredGoggles"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SandstormEffect">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification SightMaximum="4.5" MoveSpeedMultiplier="0.8"/>
+        <DisableValidatorArray value="HasNoInfraredGoggles"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Shadow">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Shield">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="Shield0"/>
+        <Modification DetectArc="0" RadarArc="0">
+            <VitalMaxArray index="Shields" value="50"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShieldLook">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Slow">
+        <Duration value="5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Slow2">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-slow.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification MoveSpeedMultiplier="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Molotov">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-slow.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification MoveSpeedMultiplier="0.65"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RiotShield">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedMultiplier="0.9"/>
+        <DamageResponse Chance="1" ModifyFraction="0.6">
+            <ExcludeEffectArray value="MolotovDamage"/>
+            <ExcludeEffectArray value="GuassRifle"/>
+            <ExcludeEffectArray value="Oxygendamage"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Stunned">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.75"/>
+        <Modification MoveSpeedMultiplier="0.7">
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="UnburrowSlow">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification MoveSpeedMultiplier="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TheThingSensory">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-radar.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Modification DetectArc="0" Radar="16" RadarFilters="-;Neutral,RawResource,HarvestableResource,Missile,Destructible,Buried,Cloaked">
+            <DeathResponse>
+                <Cost>
+                    <Charge Link="Behavior/SensorTowerRadar"/>
+                    <Cooldown Link="Behavior/SensorTowerRadar"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TheThingSensory2">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-radar.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Modification Detect="1" DetectFilters="Buried;-" RadarFilters="-;RawResource,HarvestableResource,Missile,Destructible,Buried,Cloaked"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Frenzy2">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-corruption_multi.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <Modification MoveSpeedMultiplier="2.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TimeBomb">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-fungalgrowth-color.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <ExpireEffect value="PImpExplodeDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Unburrow">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="Unburrow"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Moreoxygen">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="Oxygenmax"/>
+        <DisableValidatorArray value="OxygenEnumareaadd"/>
+        <Period value="1"/>
+        <PeriodicEffect value="Addoxygen"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="UnknownBehavior">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="Thingisnotaround"/>
+        <Modification>
+            <VitalDamageGainArray index="Life">
+                <KindArray index="Ranged" value="1"/>
+            </VitalDamageGainArray>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+            <AbilLinkDisableArray value="PsiStorm2"/>
+            <AbilLinkDisableArray value="ToggleFlamethrower"/>
+        </Modification>
+        <DamageResponse Chance="1" Handled="RemoveNoteamkilling"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="attackspeedbuff">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="50"/>
+        <MaxStackCountPerCaster value="50"/>
+        <Duration value="5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MeatHook">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.125"/>
+        <InitialEffect value="MeatHookDamage"/>
+        <Modification MoveSpeedMultiplier="10">
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <DeathResponse>
+                <Cost>
+                    <Cooldown Link="Behavior/##id##"/>
+                </Cost>
+            </DeathResponse>
+        </Modification>
+    </CBehaviorBuff>
+</Catalog>

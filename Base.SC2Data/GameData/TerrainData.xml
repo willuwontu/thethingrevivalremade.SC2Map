@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CTerrain id="BraxisAlpha">
+        <BlendTextures index="1" value="BraxisAlphaRust"/>
+        <BlendTextures index="2" value="BraxisAlphaRock"/>
+        <BlendTextures index="3" value="HavenDirt"/>
+        <BlendTextures index="4" value="HavenLeaves"/>
+        <BlendTextures index="5" value="CastanarPanels"/>
+        <BlendTextures index="6" value="IceWorld4"/>
+        <BlendTextures index="7" value="IceWorld1"/>
+        <CliffSets index="0" value="MarSaraCliff0"/>
+    </CTerrain>
+    <CTerrain id="MarSara">
+        <BlendTextures index="5" value="CastanarPanels"/>
+    </CTerrain>
+</Catalog>

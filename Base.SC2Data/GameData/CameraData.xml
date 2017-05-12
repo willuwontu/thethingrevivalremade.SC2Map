@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CCamera id="SpacePlatform">
+        <TargetSmooth>
+            <SmoothTimeMin value="0.000000"/>
+            <SmoothTimeMax value="0.000000"/>
+            <DisplacementMin value="0.000000"/>
+            <VelocityMax value="0.000000"/>
+        </TargetSmooth>
+        <MaxScrollRate index="Follow" value="0.000000"/>
+        <MaxScrollDistance index="Follow" value="0.000000"/>
+        <VerticalScrollRateMultiplier index="Follow" value="0.000000"/>
+        <ScrollAccelerationPeriod index="Follow" value="0.000000"/>
+        <ScrollDecelerationPeriod index="Follow" value="0.000000"/>
+        <ForwardScale index="Normal" value="0.000000"/>
+        <ForwardScale index="Follow" value="0.000000"/>
+        <StrafeScale index="Normal" value="0.000000"/>
+        <StrafeScale index="Follow" value="0.000000"/>
+    </CCamera>
+</Catalog>

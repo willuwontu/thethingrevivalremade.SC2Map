@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CValidatorUnitCompareBehaviorCount id="BeingCarried">
+        <Value value="1"/>
+        <Behavior value="Carried"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="CasterIsNotVisible">
+        <WhichUnit Value="Caster"/>
+        <Filters value="-;Visible"/>
+    </CValidatorUnitFilters>
+    <CValidatorCombine id="ChargeCombine">
+        <Type value="And"/>
+        <CombineArray value="ChargeNearTarget"/>
+        <CombineArray value="TargetIsPathable"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="ChargeNearTarget">
+        <WhichLocation Effect="Chargeset" Value="TargetUnit"/>
+        <Compare value="GT"/>
+        <Range value="2"/>
+        <Pathing value="1"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorLocationEnumArea id="DoorClose">
+        <WhichLocation Value="CasterUnitOrPoint"/>
+        <AreaArray Count="0" Radius="2"/>
+        <Compare value="Eq"/>
+        <SearchFlags index="SameCliff" value="1"/>
+        <SearchFilters value="-;Structure,Missile,Item,Buried,Dead"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorCombine id="DoorLockValidation">
+        <CombineArray value="NotMaxEnergy22"/>
+        <CombineArray value="DoorClose"/>
+    </CValidatorCombine>
+    <CValidatorLocationEnumArea id="DoorOpen">
+        <WhichLocation Value="CasterUnitOrPoint"/>
+        <AreaArray Compare="GT" Count="0" Radius="2"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+        <SearchFlags index="SameCliff" value="1"/>
+        <SearchFilters value="-;Self,Structure,Missile,Item,Buried,Dead"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorCombine id="ERIsADoor">
+        <CombineArray value="IsADoor1"/>
+        <CombineArray value="IsADoor12"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="FreDamages1">
+        <Value value="1"/>
+        <Behavior value="FummyFireBehavior"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitInventoryContainsItem id="HasAbility"/>
+    <CValidatorUnitCompareBehaviorCount id="HasNoInfraredGoggles">
+        <WhichUnit Value="Origin"/>
+        <Behavior value="InfraredGoggles"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="IsADoor1">
+        <Value value="DestructibleGateStraightVertical"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsADoor12">
+        <Value value="DestructibleGateStraightHorizontal"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsCorpse">
+        <Value value="Corpse"/>
+    </CValidatorUnitType>
+    <CValidatorLocationCompareCliffLevel id="IsNotOnWall">
+        <WhichLocation Value="CasterUnit"/>
+        <Compare value="GT"/>
+        <Value value="1"/>
+    </CValidatorLocationCompareCliffLevel>
+    <CValidatorUnitType id="IsThing">
+        <Value value="InfestedAbomination"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="Ismarine">
+        <CombineArray value="Isinfected"/>
+        <CombineArray value="Isuninfected"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="Isuninfected">
+        <Value value="Marine3"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="Isinfected">
+        <Value value="Marine2"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="Noadrenalineused">
+        <Compare value="LT"/>
+        <Value value="1"/>
+        <Behavior value="Adrenlaineused"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="Thingisnotaround">
+        <AreaArray Radius="8" Validator="Thing"/>
+        <AreaArray Radius="1" Validator="Thing2"/>
+        <Compare value="LT"/>
+        <Count value="1"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareVital id="LifeGreaterThanDoorMaxDmg">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Value value="25"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorLocationCompareCliffLevel id="LocationSameCliff">
+        <OtherLocation Value="CasterPoint"/>
+    </CValidatorLocationCompareCliffLevel>
+    <CValidatorUnitCompareVital id="Noenergy">
+        <WhichUnit Value="Source"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorPlayerCompareResource id="Nooxygen">
+        <Resource value="Vespene"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorUnitCompareVital id="NotMaxEnergy2">
+        <ResultFailed value="TooMuchEnergy"/>
+        <WhichUnit Value="Caster"/>
+        <Type value="Fraction"/>
+        <Value value="1"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="NotMaxEnergy22">
+        <ResultFailed value="TooMuchEnergy"/>
+        <WhichUnit Value="Caster"/>
+        <Compare value="LT"/>
+        <Type value="Fraction"/>
+        <Value value="1"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorLocationEnumArea id="ObjectNear">
+        <ResultFailed value="Error,NNThrow"/>
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Compare="GT" Count="0" Radius="3"/>
+        <SearchFilters value="-;Player,Ally,Structure,Buried,Dead"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="OxygenEnumarearemove">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="6"/>
+        <Compare value="GE"/>
+        <Count value="4"/>
+        <SearchFilters value="-;Structure,Item"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitType id="NotMothership2">
+        <Value value="InfestedAbomination"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorLocationEnumArea id="OxygenEnumareaadd">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="6"/>
+        <Compare value="LE"/>
+        <Count value="3"/>
+        <SearchFilters value="-;Structure,Item"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="OxygenEnumarearemove4">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="6"/>
+        <Compare value="Eq"/>
+        <Count value="5"/>
+        <SearchFilters value="-;Structure,Item"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="OxygenEnumarearemove5">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="6"/>
+        <Compare value="Eq"/>
+        <Count value="6"/>
+        <SearchFilters value="-;Structure,Item"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="OxygenEnumarearemove6">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="6"/>
+        <Compare value="Eq"/>
+        <Count value="7"/>
+        <SearchFilters value="-;Structure,Item"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="OxygenEnumarearemove7">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="6"/>
+        <Compare value="Eq"/>
+        <Count value="8"/>
+        <SearchFilters value="-;Structure,Item"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="OxygenEnumarearemove8">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="6"/>
+        <Compare value="GE"/>
+        <Count value="9"/>
+        <SearchFilters value="-;Structure,Item"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorPlayerCompareResource id="Oxygenmax">
+        <Compare value="LT"/>
+        <Resource value="Vespene"/>
+        <Value value="400"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorPlayerCompareResource id="Oxygenmin">
+        <Compare value="GE"/>
+    </CValidatorPlayerCompareResource>
+    <CValidatorUnitCompareVital id="Shield0">
+        <ResultFailed value="TooMuchLife"/>
+        <Compare value="LE"/>
+        <Vital value="Shields"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetLifeLow25Percent">
+        <ResultFailed value="Error,LifeLess"/>
+        <Compare value="LE"/>
+        <Type value="Fraction"/>
+        <Value value="0.33"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitFilters id="TargetNotDead">
+        <Filters value="-;Dead,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitType id="Thing">
+        <Value value="InfestedAbomination"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="Thing2">
+        <Value value="InfestedAbominationBurrowed"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="OxygenAura3">
+        <Value value="3"/>
+        <Behavior value="OxygenAura"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="OxygenAura4">
+        <Value value="4"/>
+        <Behavior value="OxygenAura"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="OxygenAura5">
+        <Value value="5"/>
+        <Behavior value="OxygenAura"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="OxygenAura6">
+        <Value value="6"/>
+        <Behavior value="OxygenAura"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="OxygenAura7">
+        <Compare value="GE"/>
+        <Value value="7"/>
+        <Behavior value="OxygenAura"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="OxygenAuraLessthan3">
+        <Compare value="LT"/>
+        <Value value="3"/>
+        <Behavior value="OxygenAura"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="noflamethrower">
+        <Behavior value="HasFlameThrower"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationCompareRange id="MeatHookDistance">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <Compare value="GT"/>
+        <Range value="1"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitFilters id="SourceNotDead">
+        <WhichUnit Value="Source"/>
+        <Filters value="-;Dead"/>
+    </CValidatorUnitFilters>
+</Catalog>

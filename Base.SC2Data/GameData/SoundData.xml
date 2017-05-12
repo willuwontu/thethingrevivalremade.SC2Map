@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CSound id="250mmStrikeCannonsSound2" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Imported Data\noammo.wav" Pitch="-2.000000,2.000000" FacialGroup=""/>
+        <Select value="Sequential"/>
+    </CSound>
+    <CSound id="250mmStrikeCannonsSound22" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Imported Data\reload.wav" Pitch="-1.000000,1.000000" FacialGroup=""/>
+        <Select value="Sequential"/>
+    </CSound>
+    <CSound id="ComingHome">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Music\MissionMusic\Music_T09.ogg" Weight="0" FacialGroup=""/>
+        <Flags index="Purgable" value="1"/>
+        <Flags index="Stream" value="1"/>
+        <Category value="Music"/>
+        <LoopCount value="-1"/>
+    </CSound>
+    <CSound id="Doodad_PortZionCrusherDoodadWorkImpact">
+        <AssetArray index="0" File="Assets\Sounds\Uni\Doodads\Doodad_PortZionCrusherDoodadWorkImpact0.wav" Volume="6.000000,6.000000"/>
+        <AssetArray index="1" File="Assets\Sounds\Uni\Doodads\Doodad_PortZionCrusherDoodadWorkImpact1.wav" Volume="6.000000,6.000000"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="JingleBells">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Christmas Carols - Jingle Bell Rock.mp3" Weight="0" FacialGroup=""/>
+        <Flags index="Purgable" value="1"/>
+        <Flags index="Stream" value="1"/>
+        <Category value="Music"/>
+        <LoopCount value="-1"/>
+    </CSound>
+    <CSound id="JumpStompFalling">
+        <LoopCount value="-1"/>
+    </CSound>
+    <CSound id="PanicMode">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Audio\panicmodeofficial.mp3" FacialGroup=""/>
+        <Flags index="Purgable" value="1"/>
+        <Flags index="Stream" value="1"/>
+        <Category value="Music"/>
+    </CSound>
+    <CSound id="TheThingTheme">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Music\The Thing Revival Music [Complete].ogg" Weight="0" FacialGroup=""/>
+        <Flags index="Purgable" value="1"/>
+        <Flags index="Stream" value="1"/>
+        <Category value="Music"/>
+        <LoopCount value="-1"/>
+    </CSound>
+    <CSound id="UI_ChatMessageReceived">
+        <AssetArray index="0" removed="1"/>
+    </CSound>
+</Catalog>

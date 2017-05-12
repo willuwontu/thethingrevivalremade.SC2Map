@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="MessageDisplay" name="GameUI/UIContainer/FullscreenUpperContainer/ChatDisplay" file="GameUI">
+        <MaxMessages val="1"/>
+        <MessageDuration val="1"/>
+        <FadeDuration val="1"/>
+        <Style val="ChatDisplay"/>
+        <AcceptsMouse val="false"/>
+        <BatchText val="true"/>
+        <Anchor side="Bottom" relative="$parent" pos="Max" offset="-380"/>
+        <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+        <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+        <Width val="1"/>
+        <Height val="1"/>
+    </Frame>
+
+    <Frame type="ChatBar" name="GameUI/UIContainer/FullscreenUpperContainer/ChatBar" template="ChatBar/ChatBarTemplate" file="GameUI">
+        <Anchor side="Bottom" relative="$parent" pos="Max" offset="-250"/>
+        <Width val="800"/>
+        <Height val="84"/>
+    </Frame>
+
+    <Frame type="HelpPanel" name="MessageLogDialogTemplate\BackgroundFrame\MessageLogPanel" file="MessageLogDialog">
+        <Visible val="false"/>
+    </Frame>
+
+    <Frame type="Frame" name="MessageLogDialogTemplate\BackgroundFrame" file="MessageLogDialog">
+        <Frame type="SocialManagementPanel" name="SocialManagementPanel">
+            <Anchor side="Bottom" relative="$parent/BorderImage" pos="Max" offset="5000"/>
+        </Frame>
+
+        <Frame type="HelpPanel" name="MessageLogPanel">
+            <Anchor side="Bottom" relative="$parent/BorderImage" pos="Max" offset="-70"/>
+        </Frame>
+    </Frame>
+</Desc>

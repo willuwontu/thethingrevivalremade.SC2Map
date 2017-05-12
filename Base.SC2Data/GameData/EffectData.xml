@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEffectLaunchMissile id="AcidBomb">
+        <EditorCategories value=""/>
+        <ImpactEffect value="AcidBomb2"/>
+        <AmmoUnit value="BioStasisMissile"/>
+        <Movers Link="YamatoWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="AcidBomb2">
+        <EditorCategories value=""/>
+        <Behavior value="AcidSlowBurn"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="AcidicBurn">
+        <EditorCategories value=""/>
+        <Amount value="1"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectModifyPlayer id="Addoxygen">
+        <EditorCategories value=""/>
+        <Resources index="Vespene" value="10"/>
+        <ValidatorArray value="Oxygenmax"/>
+    </CEffectModifyPlayer>
+    <CEffectApplyBehavior id="ApplyCharge">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="Charging2"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ApplyStun">
+        <EditorCategories value=""/>
+        <Behavior value="Stunned"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="BurstRifle">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeBonus index="Biological" value="1"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Ranged"/>
+        <Amount value="1"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="BurstRifleBurst">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="BurstRifle"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.05"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="MingunRifle">
+        <EditorCategories value=""/>
+        <EffectArray value="attackspeedbuff"/>
+        <EffectArray value="GuassRifle"/>
+    </CEffectSet>
+    <CEffectSet id="MingunBurst">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/MingunRifle"/>
+        <EffectArray value="attackspeedbuff"/>
+        <EffectArray value="BurstRifleBurst"/>
+    </CEffectSet>
+    <CEffectCreateHealer id="Repair">
+        <DrainResourceCostFactor index="Minerals" value="0"/>
+        <DrainResourceCostFactor index="Vespene" value="0"/>
+        <DrainResourceCostFactor index="Terrazine" value="0"/>
+        <DrainResourceCostFactor index="Custom" value="0"/>
+        <RechargeVitalRate value="40"/>
+    </CEffectCreateHealer>
+    <CEffectApplyBehavior id="UnburrowSlow">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="BCharPers">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <FinalEffect value="RemoveCharge"/>
+        <PeriodCount value="20"/>
+        <PeriodicEffectArray value="BurChargeEffect"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="UnburrowSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Structure,Hidden,Invulnerable"/>
+        <AreaArray Radius="2" Effect="UnburrowSlow"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="BChargeSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Structure,Hidden,Invulnerable"/>
+        <AreaArray Radius="3" Effect="ApplyStun"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+    </CEffectEnumArea>
+    <CEffectDestroyPersistent id="BurChargeDestroy">
+        <EditorCategories value=""/>
+        <Effect value="BCharPers"/>
+        <Count value="1"/>
+    </CEffectDestroyPersistent>
+    <CEffectSet id="BurChargeEffect">
+        <EditorCategories value=""/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectSet id="BurChargeEnd">
+        <EditorCategories value=""/>
+        <EffectArray value="BurChargeDestroy"/>
+        <EffectArray value="OrderUnburrow"/>
+        <EffectArray value="BChargeSearch"/>
+    </CEffectSet>
+    <CEffectSet id="Burn">
+        <ValidatorArray value="IsCorpse"/>
+        <EditorCategories value=""/>
+        <EffectArray value="Kill"/>
+        <EffectArray value="BurnSearch"/>
+    </CEffectSet>
+    <CEffectSet id="Consume">
+        <ValidatorArray value="IsCorpse"/>
+        <EditorCategories value=""/>
+        <Marker Link="Effect/Burn"/>
+        <EffectArray value="Kill"/>
+        <EffectArray value="ConsumeHeal"/>
+    </CEffectSet>
+    <CEffectEnumArea id="BurnSearch">
+        <EditorCategories value=""/>
+        <AreaArray Radius="6" Effect="MoraleBoost"/>
+        <SearchFilters value="-;Structure,Missile,Item,Buried,Stasis,Dead,Hidden"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="CarriedApply">
+        <EditorCategories value=""/>
+        <Behavior value="Carried"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="ChargeMover">
+        <ValidatorArray index="0" value="TargetIsPathable"/>
+        <ValidatorArray value="LocationSameCliff"/>
+        <ValidatorArray value="TargetNotAcrossCliff"/>
+        <EditorCategories value=""/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <LaunchEffect value="BCharPers"/>
+        <ImpactEffect value="BurChargeEnd"/>
+        <Flags index="2D" value="1"/>
+        <Flags index="Placement" value="1"/>
+        <Flags index="PlacementIgnoreBlockers" value="1"/>
+        <Flags index="PlacementIgnoreCliffTest" value="1"/>
+        <Flags index="ValidateWeapon" value="0"/>
+        <Movers Link="BurrowMover"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="ChargeSearching">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/Chargeset"/>
+        <EffectArray value="IssueOrder"/>
+        <EffectArray value="ApplyCharge"/>
+        <EffectArray value="ChargingPersist"/>
+    </CEffectSet>
+    <CEffectSet id="Chargeset">
+        <EditorCategories value=""/>
+        <EffectArray value="IssueOrder"/>
+        <EffectArray value="ApplyCharge"/>
+        <EffectArray value="ChargingPersist"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="ChargingPersist">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <FinalEffect value="RemoveCharge"/>
+        <PeriodicValidator value="ChargeCombine"/>
+        <PeriodicPeriodArray value="0.5"/>
+    </CEffectCreatePersistent>
+    <CEffectModifyUnit id="ConsumeHeal">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <VitalArray index="Life" ChangeFraction="0.15"/>
+    </CEffectModifyUnit>
+    <CEffectApplyBehavior id="Disrupt">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="DoorLock">
+        <EditorCategories value=""/>
+        <VitalArray index="Energy" ChangeFraction="-1"/>
+    </CEffectModifyUnit>
+    <CEffectDamage id="Doorsmasher">
+        <EditorCategories value=""/>
+        <Amount value="200"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="EMPSearch">
+        <AreaArray index="0" Radius="4" Effect="EMPSet"/>
+    </CEffectEnumArea>
+    <CEffectDestroyPersistent id="ERChargeDestPerst">
+        <EditorCategories value=""/>
+        <Effect value="ChargingPersist"/>
+        <Count value="1"/>
+    </CEffectDestroyPersistent>
+    <CEffectSet id="ERDamageDoor">
+        <EditorCategories value=""/>
+        <EffectArray value="ERObliterateDoor"/>
+        <EffectArray value="ERHurtThing"/>
+    </CEffectSet>
+    <CEffectSet id="ERFlamesetting">
+        <EditorCategories value=""/>
+        <EffectArray value="ERFlamethrowerApp"/>
+        <EffectArray value="InfernalFlameThrower"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ERFlamethrowerApp">
+        <ValidatorArray index="0" value="IsThing"/>
+        <ValidatorArray value="FreDamages1"/>
+        <EditorCategories value=""/>
+        <Behavior value="FlamOPhobic"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="ERObliterateDoor">
+        <ValidatorArray value="ERIsADoor"/>
+        <EditorCategories value=""/>
+        <VitalFractionCurrent index="Life" value="1"/>
+        <LeechFraction index="Life" value="-0.05"/>
+        <LeechFraction index="Energy" value="-0.1"/>
+    </CEffectDamage>
+    <CEffectDamage id="ERHurtThing">
+        <ValidatorArray value="ERIsADoor"/>
+        <EditorCategories value=""/>
+        <ImpactLocation Value="CasterUnit"/>
+        <VitalFractionMax index="Life" value="0.2"/>
+    </CEffectDamage>
+    <CEffectSet id="ERPounceCaster">
+        <EditorCategories value=""/>
+        <EffectArray value="ERPounceMover"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+    <CEffectDamage id="ERPounceDamage">
+        <ValidatorArray value="CasterLifeGT15Percent"/>
+        <EditorCategories value=""/>
+        <Amount value="25"/>
+        <LeechFraction index="Life" value="-1"/>
+        <Death value="Impact"/>
+        <AreaArray Radius="3"/>
+        <ExcludeArray Effect="ERPounceCaster"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Item,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ERPounceMover">
+        <ValidatorArray index="0" value="TargetIsPathable"/>
+        <EditorCategories value=""/>
+        <Marker Link="Effect/ChargeMover"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactEffect value="ERPounceDamage"/>
+        <Flags index="2D" value="1"/>
+        <Flags index="Placement" value="1"/>
+        <Flags index="PlacementIgnoreBlockers" value="1"/>
+        <Flags index="PlacementIgnoreCliffTest" value="1"/>
+        <Flags index="ValidateAbil" value="0"/>
+        <Flags index="ValidateTeleport" value="0"/>
+        <Flags index="ValidateWeapon" value="0"/>
+        <Movers Link="ERLeapMissile"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="HoldUnit">
+        <EditorCategories value=""/>
+        <PeriodCount value="10"/>
+        <PeriodicValidator value="BeingCarried"/>
+        <PeriodicPeriodArray value="0.5"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="MolotovDamage" parent="DU_WEAP">
+        <ValidatorArray value="noMarkers"/>
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="-2"/>
+        <AttributeBonus index="Biological" value="6"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="2"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectSet id="InitSet">
+        <EditorCategories value=""/>
+        <EffectArray value="SecondThrowSearch"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+    <CEffectIssueOrder id="IssueOrder">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="attack"/>
+        <Player Value="Caster"/>
+        <Target Value="TargetUnit"/>
+    </CEffectIssueOrder>
+    <CEffectApplyBehavior id="MoraleBoost">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectIssueOrder id="OrderSlot1">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="ThingInventory"/>
+        <Player Value="Caster"/>
+        <Target Value="TargetUnitOrPoint"/>
+    </CEffectIssueOrder>
+    <CEffectLaunchMissile id="LaunchGrabbedUnit">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="TargetUnit"/>
+        <ImpactLocation Effect="ThrowSet" Value="TargetPoint"/>
+        <ImpactEffect value="ThrowLandSearch"/>
+        <Flags index="2D" value="1"/>
+        <Flags index="Placement" value="1"/>
+        <Flags index="PlacementIgnoreBlockers" value="1"/>
+        <Flags index="PlacementIgnoreCliffTest" value="1"/>
+        <Flags index="ValidateWeapon" value="0"/>
+        <Movers Link="HurlUnit"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="LaunchMuck">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="MuckSearch"/>
+        <AmmoUnit value="FungalGrowthMissile"/>
+        <Movers Link="AcidSporesWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="MuckApply">
+        <EditorCategories value=""/>
+        <Behavior value="MuckSlow"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="MuckPersist">
+        <EditorCategories value=""/>
+        <WhichLocation Value="SourcePoint"/>
+        <PeriodCount value="20"/>
+        <PeriodicEffectArray value="MuckSearch"/>
+        <PeriodicPeriodArray value="0.25"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="MuckSearch">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/ThrowSearch"/>
+        <LaunchLocation Value="SourcePoint"/>
+        <ImpactLocation Value="SourcePoint"/>
+        <SearchFilters value="-;Player,Ally,Neutral,Structure,Hidden,Invulnerable"/>
+        <AreaArray Radius="3" Effect="MuckApply"/>
+    </CEffectEnumArea>
+    <CEffectIssueOrder id="OrderUnburrow">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="BurrowInfestedAbominationUp"/>
+        <Player Value="Caster"/>
+    </CEffectIssueOrder>
+    <CEffectEnumArea id="OxygenAura">
+        <EditorCategories value=""/>
+        <Marker>
+            <MatchFlags index="CasterUnit" value="1"/>
+        </Marker>
+        <ExcludeArray/>
+        <ExcludeArray Value="Source"/>
+        <SearchFilters value="-;Structure,Item,Buried"/>
+        <AreaArray Radius="8" Effect="OxygenAuraApply"/>
+        <SearchFlags index="CenterAtLaunch" value="1"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="OxygenAuraApply">
+        <EditorCategories value=""/>
+        <Marker>
+            <MatchFlags index="CasterUnit" value="1"/>
+        </Marker>
+        <Behavior value="OxygenAura"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="OxygenSet">
+        <EditorCategories value=""/>
+        <EffectArray value="OxygenAura"/>
+        <EffectArray value="Oxygendamage"/>
+        <EffectArray value="oxygenswitch"/>
+    </CEffectSet>
+    <CEffectDamage id="PImpExplodeDamage">
+        <EditorCategories value=""/>
+        <Amount value="20"/>
+        <Death value="Disintegrate"/>
+        <AreaArray Radius="3" Fraction="1"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectSet id="PImpSet">
+        <EditorCategories value=""/>
+        <EffectArray value="PTimeBomb"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="PTimeBomb">
+        <EditorCategories value=""/>
+        <Behavior value="TimeBomb"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="ParasiteLM">
+        <ValidatorArray index="0" value="TargetLifeLow25Percent"/>
+        <EditorCategories value=""/>
+        <ImpactEffect value="PImpSet"/>
+        <AmmoUnit value="ParasiteSporeWeapon"/>
+        <Movers Link="AcidSporesWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="MolotovEffect">
+        <ValidatorArray index="0" value="NotFrenzied"/>
+        <ValidatorArray value="NotStructure"/>
+        <ValidatorArray value="PunisherGrenadesSlowTargetFilters"/>
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="Molotov"/>
+    </CEffectApplyBehavior>
+    <CEffectTeleport id="RelocateCarriedUnit">
+        <EditorCategories value=""/>
+        <MinDistance value="0"/>
+        <PlacementAround Value="CasterUnit"/>
+        <PlacementRange value="1"/>
+        <Range value="300"/>
+        <SourceLocation Value="Unknown"/>
+        <TeleportFlags index="TestFog" value="0"/>
+    </CEffectTeleport>
+    <CEffectRemoveBehavior id="RemoveCharge">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="Charging2"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
+    <CEffectRemoveBehavior id="RemoveNoteamkilling">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <BehaviorLink value="UnknownBehavior"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
+    <CEffectRemoveBehavior id="RemoveStimpack">
+        <EditorCategories value=""/>
+        <BehaviorLink value="Stimpack"/>
+    </CEffectRemoveBehavior>
+    <CEffectEnumArea id="SecondThrowSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Neutral,Structure,Hidden,Invulnerable"/>
+        <AreaArray Radius="2" Effect="ThrowSet2"/>
+        <MaxCount value="1"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="ThrowDamage">
+        <EditorCategories value=""/>
+        <Amount value="4"/>
+        <Death value="Impact"/>
+    </CEffectDamage>
+    <CEffectSet id="ThrowImpact">
+        <EditorCategories value=""/>
+        <EffectArray value="ThrowLandSearch"/>
+    </CEffectSet>
+    <CEffectEnumArea id="ThrowLandSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Structure,Item,Hidden,Invulnerable"/>
+        <AreaArray Radius="2" Effect="ThrowDamage"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="ThrowSearch">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="CasterUnit"/>
+        <SearchFilters value="Visible;Player,Ally,Structure,Hidden"/>
+        <AreaArray MaxCount="1" Radius="3" Effect="LaunchGrabbedUnit"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="ERDoorLockSearch">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="CasterUnit"/>
+        <SearchFilters value="Structure,Visible;Player,Ally,Enemy,Hidden"/>
+        <AreaArray MaxCount="1" Radius="2" Effect="DoorLock"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ThrowSet">
+        <ValidatorArray value="TargetIsPathable"/>
+        <ValidatorArray value="ObjectNear"/>
+        <EditorCategories value=""/>
+        <EffectArray value="ThrowSearch"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectSet id="ThrowSet2">
+        <EditorCategories value=""/>
+        <EffectArray value="CarriedApply"/>
+        <EffectArray value="HoldUnit"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+    <CEffectSet id="adrenalineset">
+        <ValidatorArray value="adrenalinesetTargetFilters"/>
+        <EditorCategories value=""/>
+        <EffectArray value="adrenalineused"/>
+        <EffectArray value="adrenaline"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="adrenaline">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="adrenalineused">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="attackspeedbuff">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+    </CEffectApplyBehavior>
+    <CEffectSwitch id="oxygenswitch">
+        <EditorCategories value=""/>
+        <Marker>
+            <MatchFlags index="CasterUnit" value="1"/>
+        </Marker>
+        <CaseArray Validator="OxygenAuraLessthan3" Effect="Addoxygen"/>
+        <CaseArray Validator="OxygenAura3" Effect="removeoxygen4"/>
+        <CaseArray Validator="OxygenAura4" Effect="removeoxygen5"/>
+        <CaseArray Validator="OxygenAura5" Effect="removeoxygen6"/>
+        <CaseArray Validator="OxygenAura6" Effect="removeoxygen7"/>
+        <CaseArray Validator="OxygenAura7" Effect="removeoxygen8"/>
+    </CEffectSwitch>
+    <CEffectModifyPlayer id="removeoxygen4">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/Addoxygen"/>
+        <Resources index="Vespene" value="-5"/>
+    </CEffectModifyPlayer>
+    <CEffectCreatePersistent id="ArtanisBeamPersistent">
+        <WhichLocation Value="TargetPoint"/>
+        <InitialEffect value=""/>
+        <PeriodicEffectArray index="0" removed="1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="Damage" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/ArcliteShockCannonEnemyDamage"/>
+        <AttributeFactor index="Biological" value="1"/>
+        <Kind value="Splash"/>
+        <KindSplash value="Splash"/>
+        <Amount value="50"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="0.75" Fraction="1"/>
+        <AreaArray Radius="0.9" Fraction="0.9"/>
+        <AreaArray Radius="1.25" Fraction="0.75"/>
+        <AreaArray Radius="1.6" Fraction="0.5"/>
+        <AreaArray Radius="2" Fraction="0.45"/>
+        <AreaArray Radius="2.5" Fraction="0.4"/>
+        <AreaArray Radius="4" Fraction="0.25"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Invulnerable"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+    </CEffectDamage>
+    <CEffectDamage id="GuassRifle">
+        <AttributeBonus index="Biological" value="1"/>
+        <Amount value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="InfernalFlameThrower">
+        <AttributeBonus index="Light" value="0"/>
+        <AttributeBonus index="Armored" value="-2"/>
+        <AttributeBonus index="Biological" value="8"/>
+        <Amount value="3"/>
+    </CEffectDamage>
+    <CEffectDamage id="InfestedAbomination">
+        <AttributeBonus index="Armored" value="0"/>
+        <AttributeBonus index="Structure" value="50"/>
+        <Amount value="15"/>
+    </CEffectDamage>
+    <CEffectDamage id="Oxygendamage">
+        <ValidatorArray value="Nooxygen"/>
+        <EditorCategories value=""/>
+        <ImpactLocation Value="SourceUnit"/>
+        <Amount value="0.75"/>
+        <Death value="Silentkill"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="MarauderSlowAOE">
+        <ValidatorArray index="0" removed="1"/>
+        <ExcludeArray index="0" removed="1"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Invulnerable"/>
+        <AreaArray index="0" Radius="4" Effect="PunisherGrenadesSlow"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="Medkit">
+        <ValidatorArray index="0" removed="1"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PlayerProximity">
+        <ValidatorArray index="0" value="NotMothership2"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Behavior value="PlayerProximityEffect"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="PlayerProximitySearch">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactLocation Value="CasterUnit"/>
+        <SearchFilters value="Visible;Self,Player,Neutral,Missile,Dead,Hidden"/>
+        <AreaArray Radius="16" Effect="PlayerProximity"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="PunisherGrenadesSlow2">
+        <ValidatorArray index="0" value="NotFrenzied"/>
+        <ValidatorArray value="NotStructure"/>
+        <ValidatorArray value="PunisherGrenadesSlowTargetFilters"/>
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="Slow2"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PunisherGrenadesSlow">
+        <ValidatorArray index="0" value="PunisherGrenadesSlowTargetFilters"/>
+        <ValidatorArray index="1" value="NotStructure"/>
+        <ValidatorArray index="2" value="NotFrenzied"/>
+        <ValidatorArray index="3" removed="1"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="Ram">
+        <Amount value="750"/>
+    </CEffectDamage>
+    <CEffectDamage id="Sheep">
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectDamage id="Acid" parent="Sheep"/>
+    <CEffectDamage id="TheCold" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/ArcliteShockCannonEnemyDamage"/>
+        <AttributeFactor index="Biological" value="2"/>
+        <Kind value="Splash"/>
+        <Amount value="0.5"/>
+        <Death value="Electrocute"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Invulnerable"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+    </CEffectDamage>
+    <CEffectIssueOrder id="Unburrow">
+        <ValidatorArray value="Noenergy"/>
+        <EditorCategories value=""/>
+        <Abil value="BurrowInfestedAbominationUp"/>
+        <Target Value="SourceUnit"/>
+    </CEffectIssueOrder>
+    <CEffectModifyPlayer id="removeoxygen5">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/Addoxygen"/>
+        <Resources index="Vespene" value="-6"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="removeoxygen6">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/Addoxygen"/>
+        <Resources index="Vespene" value="-7"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="removeoxygen7">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/Addoxygen"/>
+        <Resources index="Vespene" value="-8"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="removeoxygen8">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/Addoxygen"/>
+        <Resources index="Vespene" value="-12"/>
+    </CEffectModifyPlayer>
+    <CEffectApplyBehavior id="MeatHookApply">
+        <EditorCategories value=""/>
+        <Behavior value="MeatHook"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="MeatHookDamage">
+        <EditorCategories value=""/>
+        <Amount value="4"/>
+    </CEffectDamage>
+    <CEffectDestroyPersistent id="MeatHookDestroyPersistent">
+        <EditorCategories value=""/>
+        <WhichLocation Value="SourceUnit"/>
+        <Effect value="MeatHookPersistent"/>
+    </CEffectDestroyPersistent>
+    <CEffectApplyForce id="MeatHookForce">
+        <ValidatorArray value="MeatHookDistance"/>
+        <EditorCategories value=""/>
+        <WhichLocation Value="SourceUnit"/>
+        <Amount value="-2"/>
+    </CEffectApplyForce>
+    <CEffectSet id="MeatHookImpact">
+        <ValidatorArray value="noMarkers"/>
+        <EditorCategories value=""/>
+        <EffectArray value="MeatHookApply"/>
+        <EffectArray value="MeatHookDestroyPersistent"/>
+        <EffectArray value="MeatHookPullPersistent"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="MeatHookInitial">
+        <EditorCategories value=""/>
+        <WhichLocation Value="SourcePoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="MeatHookLaunch"/>
+        <PeriodicOffsetArray value="0,-12,0"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="MeatHookLaunch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <LaunchEffect value="MeatHookPersistent"/>
+        <Flags index="Return" value="1"/>
+        <AmmoUnit value="MeatHookMissile"/>
+        <ReturnMovers Link="PunisherGrenadesWeapon"/>
+        <Movers Link="PunisherGrenadesWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="MeatHookPersistent">
+        <EditorCategories value=""/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <WhichLocation Value="SourceUnit"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <PeriodicEffectArray value="MeatHookSearch"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="MeatHookPullPersistent">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <PeriodicValidator value="SourceNotDead"/>
+        <PeriodicEffectArray value="MeatHookApply"/>
+        <PeriodicEffectArray value="MeatHookForce"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="MeatHookSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Structure,Item"/>
+        <AreaArray Radius="0.1" Effect="MeatHookImpact"/>
+        <MaxCount value="1"/>
+    </CEffectEnumArea>
+</Catalog>

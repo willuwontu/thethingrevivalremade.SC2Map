@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CButton id="AcidBomb">
+        <Icon value="Assets\Textures\btn-ability-zerg-explode.dds"/>
+        <HotkeyAlias value="BurrowedCharge"/>
+    </CButton>
+    <CButton id="ActivateFlamethrower">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Burn">
+        <Icon value="btn-ability-burn.dds"/>
+        <AlertIcon value="btn-ability-burn.dds"/>
+    </CButton>
+    <CButton id="Consume">
+        <Icon value="Assets\Textures\btn-ability-zerg-corruption-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-corruption-color.dds"/>
+        <HotkeyAlias value="ConsumeDNA"/>
+    </CButton>
+    <CButton id="LastConsumed">
+        <Icon value="Assets\Textures\btn-ability-terran-setrallypoint.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-setrallypoint.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="MoraleBoost">
+        <Icon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
+    </CButton>
+    <CButton id="OriginalColor">
+        <Icon value="Assets\Textures\ui_btn_aicommand_commandcard_rally.dds"/>
+        <AlertIcon value="Assets\Textures\ui_btn_aicommand_commandcard_rally.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="PreviousColor">
+        <Name value="PreviousColor"/>
+        <Icon value="Assets\Textures\btn-command-returncargo.dds"/>
+        <AlertName value="Player15Color"/>
+        <AlertIcon value="Assets\Textures\btn-command-returncargo.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Green">
+        <Icon value="playercolors\Player2Green.dds"/>
+        <AlertName value="Player2Color"/>
+        <AlertIcon value="playercolors\Player2Green.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="BurrowedCharge">
+        <Icon value="Assets\Textures\btn-ability-zerg-creepmove.dds"/>
+    </CButton>
+    <CButton id="Charge2">
+        <Icon value="Assets\Textures\btn-ability-zerg-creepmove.dds"/>
+        <HotkeyAlias value="BurrowedCharge"/>
+    </CButton>
+    <CButton id="LightYellow">
+        <Name value="Player11Color"/>
+        <Icon value="playercolors\Player11LightYellow.dds"/>
+        <AlertName value="Player11Color"/>
+        <AlertIcon value="playercolors\Player11LightYellow.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Gray">
+        <Name value="Player14Color"/>
+        <Icon value="playercolors\Player14Gray.dds"/>
+        <AlertName value="Player14Color"/>
+        <AlertIcon value="playercolors\Player14Gray.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="DarkRed">
+        <Name value="Player9Color"/>
+        <Icon value="playercolors\Player9DarkRed.dds"/>
+        <AlertName value="Player9Color"/>
+        <AlertIcon value="playercolors\Player9DarkRed.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="DeactivateFlamethrower">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ERBurrowedSurveillance">
+        <Icon value="Assets\Textures\btn-ability-zerg-corruption-multi.dds"/>
+        <HotkeyAlias value="BurrowedCharge"/>
+    </CButton>
+    <CButton id="ERFlamophobic">
+        <Icon value="Assets\Textures\btn-ability-zerg-frenzied.dds"/>
+        <HotkeyAlias value="BurrowedCharge"/>
+    </CButton>
+    <CButton id="ERObliterateDoor">
+        <Icon value="Assets\Textures\btn-ability-zerg-attackstructure.dds"/>
+        <HotkeyAlias value="BurrowedCharge"/>
+    </CButton>
+    <CButton id="ERPounce">
+        <Icon value="Assets\Textures\btn-ability-zerg-infestation.dds"/>
+    </CButton>
+    <CButton id="DarkBlue">
+        <Name value="Player7Color"/>
+        <Icon value="playercolors\Player7DarkBlue.dds"/>
+        <AlertName value="Player7Color"/>
+        <AlertIcon value="playercolors\Player7DarkBlue.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="InfestedAbomination2">
+        <Icon value="Assets\Textures\btn-unit-zerg-corruptedmass.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-corruptedmass.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="InfestedAbomination22">
+        <Icon value="Assets\Textures\btn-unit-zerg-corruptedmass.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-corruptedmass.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="InfestedAbomination2222">
+        <Icon value="Assets\Textures\btn-tips-researchunlocked.dds"/>
+        <AlertIcon value="Assets\Textures\btn-tips-researchunlocked.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="InfraredGoggles">
+        <Icon value="Assets\Textures\aicommand_detection1.dds"/>
+        <AlertIcon value="Assets\Textures\aicommand_detection1.dds"/>
+    </CButton>
+    <CButton id="ColorSelection">
+        <Name value="Selection"/>
+        <Icon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
+        <AlertName value="Selection"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Purple">
+        <Name value="Player13Color"/>
+        <Icon value="playercolors\Player13Purple.dds"/>
+        <AlertName value="Player13Color"/>
+        <AlertIcon value="playercolors\Player13Purple.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Yellow">
+        <Name value="Player10Color"/>
+        <Icon value="playercolors\Player10Yellow.dds"/>
+        <AlertName value="Player10Color"/>
+        <AlertIcon value="playercolors\Player10Yellow.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="DarkGreen">
+        <Name value="Player8Color"/>
+        <Icon value="playercolors\Player8DarkGreen.dds"/>
+        <AlertName value="Player8Color"/>
+        <AlertIcon value="playercolors\Player8DarkGreen.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="DarkYellow">
+        <Name value="Player12Color"/>
+        <Icon value="playercolors\Player12DarkYellow.dds"/>
+        <AlertName value="Player12Color"/>
+        <AlertIcon value="playercolors\Player12DarkYellow.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Medkit">
+        <Icon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Muck">
+        <Icon value="Assets\Textures\btn-ability-zerg-contaminaite.dds"/>
+        <HotkeyAlias value="BurrowedCharge"/>
+    </CButton>
+    <CButton id="ParasiticExplosion">
+        <Icon value="Assets\Textures\btn-ability-zerg-neuralparasite.dds"/>
+        <HotkeyAlias value="BurrowedCharge"/>
+    </CButton>
+    <CButton id="RiotShield">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-combatshield-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-techupgrade-terran-combatshield-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="Throw">
+        <Icon value="Assets\Textures\btn-ability-zerg-corruption.dds"/>
+    </CButton>
+    <CButton id="ThrowMolotov">
+        <TooltipFlags index="ShowRange" value="1"/>
+        <TooltipFlags index="ShowRadius" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Black">
+        <Name value="Player15Color"/>
+        <Icon value="playercolors\Player15Black.dds"/>
+        <AlertName value="Player15Color"/>
+        <AlertIcon value="playercolors\Player15Black.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Wrench">
+        <Icon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="LightRed">
+        <Name value="Player6Color"/>
+        <Icon value="playercolors\Player6LightRed.dds"/>
+        <AlertName value="Player6Color"/>
+        <AlertIcon value="playercolors\Player6LightRed.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="LightBlue">
+        <Name value="Player4Color"/>
+        <Icon value="playercolors\Player4LightBlue.dds"/>
+        <AlertName value="Player4Color"/>
+        <AlertIcon value="playercolors\Player4LightBlue.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="QuickDrop">
+        <Icon value="Assets\Textures\btn-ability-terran-load.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-load.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Radio">
+        <Icon value="Assets\Textures\ui_speakerbutton_on.dds"/>
+        <AlertIcon value="Assets\Textures\ui_speakerbutton_on.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="ActivateFlamethrower"/>
+    </CButton>
+    <CButton id="Blue">
+        <Name value="Player1Color"/>
+        <Icon value="playercolors\Player1Blue.dds"/>
+        <AlertName value="Player1Color"/>
+        <AlertIcon value="playercolors\Player1Blue.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Red">
+        <Name value="Player3Color"/>
+        <Icon value="playercolors\Player3Red.dds"/>
+        <AlertName value="Player3Color"/>
+        <AlertIcon value="playercolors\Player3Red.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="ThrowGrenade">
+        <Icon value="Assets\Textures\btn-ability-protoss-blink-zeratul.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-blink-zeratul.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TooltipFlags index="ShowRange" value="1"/>
+        <TooltipFlags index="ShowRadius" value="1"/>
+    </CButton>
+    <CButton id="Corpse">
+        <TooltipFlags index="ShowHotkey" value="0"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+        <TooltipFlags index="ShowResources" value="0"/>
+        <TooltipFlags index="ShowSupply" value="0"/>
+        <TooltipFlags index="ShowUsage" value="0"/>
+        <TooltipFlags index="ShowTime" value="0"/>
+        <TooltipFlags index="ShowCooldown" value="0"/>
+        <TooltipFlags index="ShowRequirements" value="0"/>
+        <TooltipFlags index="ShowAutocast" value="0"/>
+        <Icon value="Assets\Textures\btn-unit-terran-marine.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marine.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="LightGreen">
+        <Name value="Player5Color"/>
+        <Icon value="playercolors\Player5LightGreen.dds"/>
+        <AlertName value="Player5Color"/>
+        <AlertIcon value="playercolors\Player5LightGreen.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="MeatHook">
+        <Icon value="Assets\Textures\btn-building-zerg-spinecrawler.dds"/>
+    </CButton>
+</Catalog>

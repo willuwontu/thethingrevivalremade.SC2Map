@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CWater id="BraxisAlpha">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.900000"/>
+            <Color value="0.360784,0.572549,0.000000,0.319000"/>
+            <ColorFallOff value="0.000000"/>
+            <Specularity value="100.000000"/>
+            <SpecularScaler value="2.450000"/>
+            <UvRate value="-0.001000,0.000022,0.000000,0.000000"/>
+            <TextureRoughness value="1.000000"/>
+            <ReflectionDistortion value="0.012000"/>
+            <RefractionDistortion value="0.020000"/>
+            <MinReflection value="0.300000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+        <State>
+            <Name value="Alternate Setting"/>
+            <Height value="7.450000"/>
+            <Color value="0.019608,0.756863,0.054902,0.760000"/>
+            <ColorFallOff value="1.000000"/>
+            <CausticsFallOff value="0.500000"/>
+            <Specularity value="211.500000"/>
+            <SpecularScaler value="1.350000"/>
+            <UvRate value="-0.000000,-0.001000,0.000000,0.000000"/>
+            <ReflectionDistortion value="0.012000"/>
+            <RefractionDistortion value="0.002500"/>
+            <ShadowDistortion value="1.000000"/>
+            <MinReflection value="0.106000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+        <ReceiveShadows value="1"/>
+    </CWater>
+    <CWater id="CharAcid">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.800000"/>
+            <Color value="0.121569,0.560784,0.000000,0.000000"/>
+            <ColorFallOff value="0.342000"/>
+            <CausticsFallOff value="0.325000"/>
+            <Specularity value="67.500000"/>
+            <SpecularScaler value="0.550000"/>
+            <UvRate value="-0.006860,-0.043462,0.000000,0.000000"/>
+            <UvRotate value="3.141593"/>
+            <MeshRoughness value="0.744000"/>
+            <TextureRoughness value="1.000000"/>
+            <ReflectionDistortion value="0.167000"/>
+            <RefractionDistortion value="0.015200"/>
+            <MinReflection value="0.160000"/>
+            <ReflectivityPower value="5.960000"/>
+        </State>
+    </CWater>
+    <CWater id="Default">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.500000"/>
+            <Color value="0.100000,0.350000,0.500000,0.300000"/>
+            <ColorFallOff value="0.100000"/>
+            <Specularity value="100.000000"/>
+            <SpecularScaler value="2.450000"/>
+            <UvRate value="0.000000,-1.000000,0.000000,0.000000"/>
+            <ReflectionDistortion value="0.012000"/>
+            <RefractionDistortion value="0.025000"/>
+            <MinReflection value="0.300000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+    </CWater>
+    <CWater id="Haven">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.900000"/>
+            <Color value="0.094118,0.349020,0.494118,0.300000"/>
+            <ColorFallOff value="0.100000"/>
+            <Specularity value="100.000000"/>
+            <SpecularScaler value="2.450000"/>
+            <UvRate value="-0.000000,-0.001000,0.000000,0.000000"/>
+            <ReflectionDistortion value="0.012000"/>
+            <RefractionDistortion value="0.020000"/>
+            <MinReflection value="0.300000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+        <ReceiveShadows value="1"/>
+    </CWater>
+    <CWater id="HavenCreep">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.900000"/>
+            <Color value="0.100000,0.350000,0.500000,0.300000"/>
+            <ColorFallOff value="0.100000"/>
+            <Specularity value="100.000000"/>
+            <SpecularScaler value="2.450000"/>
+            <UvRate value="0.000000,-1.000000,0.000000,0.000000"/>
+            <ReflectionDistortion value="0.012000"/>
+            <RefractionDistortion value="0.025000"/>
+            <MinReflection value="0.300000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+    </CWater>
+    <CWater id="Korhal">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.900000"/>
+            <Color value="0.098039,0.349020,0.498039,0.300000"/>
+            <ColorFallOff value="0.101000"/>
+            <Specularity value="100.000000"/>
+            <SpecularScaler value="2.450000"/>
+            <UvRate value="-0.000000,-0.001000,0.000000,0.000000"/>
+            <ReflectionDistortion value="0.012000"/>
+            <RefractionDistortion value="0.020000"/>
+            <MinReflection value="0.300000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+        <ReceiveShadows value="1"/>
+    </CWater>
+    <CWater id="MarSara">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.900000"/>
+            <Color value="0.000000,0.000000,0.000000,0.382000"/>
+            <ColorFallOff value="1.000000"/>
+            <Specularity value="10.500000"/>
+            <SpecularScaler value="0.050000"/>
+            <UvRate value="0.000292,0.000956,0.000000,0.000000"/>
+            <MeshRoughness value="0.459000"/>
+            <TextureRoughness value="1.000000"/>
+            <ReflectionDistortion value="0.069000"/>
+            <RefractionDistortion value="0.002500"/>
+            <MinReflection value="0.333000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+    </CWater>
+    <CWater id="Meinhoff">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.900000"/>
+            <Color value="0.098039,0.349020,0.498039,0.477000"/>
+            <ColorFallOff value="0.100000"/>
+            <Specularity value="100.000000"/>
+            <SpecularScaler value="2.450000"/>
+            <UvRate value="-0.000000,-0.001000,0.000000,0.000000"/>
+            <UvRotate value="2.922903"/>
+            <ReflectionDistortion value="0.029000"/>
+            <RefractionDistortion value="0.020000"/>
+            <MinReflection value="0.300000"/>
+            <ReflectivityPower value="19.000000"/>
+        </State>
+    </CWater>
+    <CWater id="Tarsonis">
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.700000"/>
+            <Color value="0.094118,0.349020,0.494118,0.300000"/>
+            <ColorFallOff value="0.100000"/>
+            <Specularity value="100.000000"/>
+            <SpecularScaler value="2.450000"/>
+            <UvRate value="0.000724,-0.000690,0.000000,0.000000"/>
+            <UvRotate value="3.076492"/>
+            <MeshRoughness value="0.057000"/>
+            <TextureRoughness value="1.000000"/>
+            <ReflectionDistortion value="0.012000"/>
+            <RefractionDistortion value="0.020000"/>
+            <MinReflection value="0.300000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+    </CWater>
+    <CWater id="ZhakulDas">
+        <!--        <IsLava value="1"/>
+        <LavaModel value="LavaSilver"/> -->
+        <State index="0">
+            <Name value="[Default]"/>
+            <Height value="7.850000"/>
+            <Color value="0.200000,0.149020,0.203922,0.382000"/>
+            <ColorFallOff value="1.000000"/>
+            <Specularity value="10.500000"/>
+            <SpecularScaler value="0.050000"/>
+            <UvRate value="0.000292,0.000956,0.000000,0.000000"/>
+            <MeshRoughness value="0.459000"/>
+            <TextureRoughness value="1.000000"/>
+            <ReflectionDistortion value="0.069000"/>
+            <RefractionDistortion value="0.002500"/>
+            <MinReflection value="0.333000"/>
+            <ReflectivityPower value="8.000000"/>
+        </State>
+    </CWater>
+</Catalog>

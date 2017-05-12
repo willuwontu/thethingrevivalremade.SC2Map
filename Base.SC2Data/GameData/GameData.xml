@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CGame id="Dflt">
+        <TeamColors index="0">
+            <Value index="Emissive" value="1.000000,1.000000,1.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="1" Name="UI/TeamColor01" UserChoice="1" AttributeId="tc01">
+            <Value index="Diffuse" value="0.000000,0.000000,1.000000,1.000000"/>
+            <Value index="Emissive" value="0.000000,0.000000,1.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="2">
+            <Value index="Diffuse" value="0.000000,1.000000,0.000000,1.000000"/>
+            <Value index="Emissive" value="0.000000,1.000000,0.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="3">
+            <Value index="Diffuse" value="1.000000,0.000000,0.000000,1.000000"/>
+            <Value index="Emissive" value="1.000000,0.000000,0.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="4" Name="UI/TeamColor04" UserChoice="1" AttributeId="tc04">
+            <Value index="Diffuse" value="0.000000,0.750000,1.000000,1.000000"/>
+            <Value index="Emissive" value="0.000000,0.750000,1.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="5">
+            <Value index="Diffuse" value="0.750000,1.000000,0.000000,1.000000"/>
+            <Value index="Emissive" value="0.750000,1.000000,0.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="6">
+            <Value index="Diffuse" value="1.000000,0.000000,0.750000,1.000000"/>
+            <Value index="Emissive" value="1.000000,0.000000,0.750000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="7">
+            <Value index="Diffuse" value="0.000000,0.000000,0.500000,1.000000"/>
+            <Value index="Emissive" value="0.000000,0.000000,0.500000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="8">
+            <Value index="Diffuse" value="0.000000,0.500000,0.000000,1.000000"/>
+            <Value index="Emissive" value="0.000000,0.500000,0.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="9">
+            <Value index="Diffuse" value="0.400000,0.000000,0.000000,1.000000"/>
+            <Value index="Emissive" value="0.400000,0.000000,0.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="10" HDRMultiplier="1.500000">
+            <Value index="Diffuse" value="1.000000,1.000000,0.000000,1.000000"/>
+            <Value index="Emissive" value="1.000000,1.000000,0.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="11">
+            <Value index="Diffuse" value="1.000000,1.000000,0.500000,1.000000"/>
+            <Value index="Emissive" value="1.000000,1.000000,0.500000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="12">
+            <Value index="Diffuse" value="0.500000,0.500000,0.000000,1.000000"/>
+            <Value index="Emissive" value="0.500000,0.500000,0.000000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="13">
+            <Value index="Diffuse" value="0.630000,0.130000,0.940000,1.000000"/>
+            <Value index="Emissive" value="0.630000,0.130000,0.940000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="14">
+            <Value index="Diffuse" value="0.500000,0.500000,0.500000,1.000000"/>
+            <Value index="Emissive" value="0.500000,0.500000,0.500000,1.000000"/>
+        </TeamColors>
+        <TeamColors index="15">
+            <Value index="Diffuse" value="0.000000,0.000000,0.000000,1.000000"/>
+            <Value index="Emissive" value="0.000000,0.000000,0.000000,1.000000"/>
+        </TeamColors>
+        <AttackRevealTime value="0.1"/>
+    </CGame>
+</Catalog>

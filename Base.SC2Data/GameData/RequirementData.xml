@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CRequirement id="BurrowCharge">
+        <NodeArray index="Show" Link="CountUpgradeBurrowChargeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ERBurreveal">
+        <NodeArray index="Show" Link="CountUpgradeERBurRevealerQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ERDoorExplode">
+        <NodeArray index="Show" Link="CountUpgradeERDoorExplodeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ERFlamophobic">
+        <NodeArray index="Show" Link="CountUpgradeERFlamophobicQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ERPounce">
+        <NodeArray index="Show" Link="CountUpgradeERPounceQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HasFire">
+        <NodeArray index="Use" Link="GTECountBehaviorFireQueuedOrBetterAtUnit1"/>
+        <NodeArray index="Show" Link="GTECountBehaviorFireQueuedOrBetterAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="HasMoraleBoost">
+        <NodeArray index="Use" Link="GTECountBehaviorMoraleBoostQueuedOrBetterAtUnit1"/>
+        <NodeArray index="Show" Link="GTECountBehaviorMoraleBoostQueuedOrBetterAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="Haswrench">
+        <NodeArray index="Show" Link="CountBehaviorHasWrenchCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="IsSlot1Charge">
+        <NodeArray index="Show" Link="CountUpgradeSlot1EnableChargeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="IsSlot2Throw">
+        <NodeArray index="Show" Link="CountUpgradeThrowQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="IsSlot3ParaExp">
+        <NodeArray index="Show" Link="CountUpgradeParaExpQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="IsSlot4AcidBomb">
+        <NodeArray index="Show" Link="CountUpgradeAcidBombQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="IsSlot5Muck">
+        <NodeArray index="Show" Link="CountUpgradeMuckQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="Isthing">
+        <NodeArray index="Use" Link="GTCountUpgradeIsthingCompleteOnly0"/>
+        <NodeArray index="Show" Link="GTCountUpgradeIsthingCompleteOnly0"/>
+    </CRequirement>
+</Catalog>

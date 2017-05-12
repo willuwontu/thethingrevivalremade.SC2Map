@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CWeaponLegacy id="BurstRifle">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <DisplayEffect value="BurstRifleBurst"/>
+        <DisplayAttackCount value="3"/>
+        <Range value="6"/>
+        <Period value="0.3"/>
+        <Effect value="BurstRifleBurst"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GuassRifle">
+        <Period value="0.1"/>
+        <Backswing value="0.08"/>
+        <Range value="6"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable,Summoned"/>
+        <Effect value="MingunRifle"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfernalFlameThrower">
+        <Range value="4.5"/>
+        <Period value="0.5"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfestedAbomination">
+        <Range value="0.8"/>
+    </CWeaponLegacy>
+</Catalog>
