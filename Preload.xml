@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Preload>
 <Actor id="SYSTEM_ActorConfig"/>
-<Terrain id="Agria"/>
+<Terrain id="BlackopsLab_A"/>
 <Unit id="Marine"/>
 </Preload>

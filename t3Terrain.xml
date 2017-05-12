@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <terrain version="114">
-    <heightMap tileSet="Agria" uvtiling="24.000000 24.000000 0.000000 0.000000 " dim="257 257 " offset="0.000000 0.000000 0.000000 " scale="1.000000e+00 1.000000e+00 1.000000e+00 ">
+    <heightMap tileSet="BlackopsLab_A" uvtiling="24.000000 24.000000 0.000000 0.000000 " dim="257 257 " offset="0.000000 0.000000 0.000000 " scale="1.000000e+00 1.000000e+00 1.000000e+00 ">
         <cliffSetList num="3">
             <cliffSet i="0" name="BraxisAlphaCliff1"/>
             <cliffSet i="1" name="MarSaraCliff0"/>
             <cliffSet i="2" name="AgriaCliff0"/>
         </cliffSetList>
-        <vertData quantizeBias="9.007673e+00" quantizeScale="4.922249e-04" standardHeight="8.000000e+00" name="t3HeightMap"/>
+        <vertData quantizeBias="9.007964e+00" quantizeScale="4.922263e-04" standardHeight="8.000000e+00" name="t3HeightMap"/>
         <masks name="t3TextureMasks"/>
         <textureSetList num="8">
-            <textureSet i="0" name="BraxisAlpha"/>
-            <textureSet i="1" name="MarSara"/>
+            <textureSet i="0" name="BlackopsLab_A"/>
+            <textureSet i="1" name="BraxisAlphaEx2"/>
             <textureSet i="2" name=""/>
             <textureSet i="3" name=""/>
             <textureSet i="4" name=""/>
@@ -19,22 +19,22 @@
             <textureSet i="7" name=""/>
         </textureSetList>
         <textureList num="64">
-            <texture i="0" name="BraxisAlphaMetal"/>
-            <texture i="1" name="IceWorld4"/>
-            <texture i="2" name="IceWorld1"/>
-            <texture i="3" name="BraxisAlphaRust"/>
-            <texture i="4" name="BraxisAlphaRock"/>
-            <texture i="5" name="HavenLeaves"/>
-            <texture i="6" name="HavenDirt"/>
-            <texture i="7" name="CastanarPanels"/>
-            <texture i="8" name="MarSaraDirt"/>
-            <texture i="9" name="MarSaraSand"/>
-            <texture i="10" name="MarSaraRocky"/>
-            <texture i="11" name="MarSaraDirtCracked"/>
-            <texture i="12" name="MarSaraDarkSand"/>
-            <texture i="13" name="CastanarPanels"/>
-            <texture i="14" name="MarSaraConcrete"/>
-            <texture i="15" name="MarSaraPanels"/>
+            <texture i="0" name="BlackOpsLabA1"/>
+            <texture i="1" name="BlackOpsLabA2"/>
+            <texture i="2" name="BlackOpsLabA3"/>
+            <texture i="3" name="BlackOpsLabA4"/>
+            <texture i="4" name="BlackOpsLabA5"/>
+            <texture i="5" name="BlackOpsLabA6"/>
+            <texture i="6" name="BlackOpsLabA7"/>
+            <texture i="7" name="BlackOpsLabA8"/>
+            <texture i="8" name=""/>
+            <texture i="9" name=""/>
+            <texture i="10" name=""/>
+            <texture i="11" name=""/>
+            <texture i="12" name=""/>
+            <texture i="13" name=""/>
+            <texture i="14" name=""/>
+            <texture i="15" name=""/>
             <texture i="16" name=""/>
             <texture i="17" name=""/>
             <texture i="18" name=""/>
@@ -341,22 +341,22 @@
             <blockTextureSet i="253" tileSet="0"/>
             <blockTextureSet i="254" tileSet="0"/>
             <blockTextureSet i="255" tileSet="0"/>
-            <blockTextureSet i="256" tileSet="1"/>
-            <blockTextureSet i="257" tileSet="1"/>
-            <blockTextureSet i="258" tileSet="1"/>
-            <blockTextureSet i="259" tileSet="1"/>
-            <blockTextureSet i="260" tileSet="1"/>
-            <blockTextureSet i="261" tileSet="1"/>
-            <blockTextureSet i="262" tileSet="1"/>
-            <blockTextureSet i="263" tileSet="1"/>
-            <blockTextureSet i="264" tileSet="1"/>
-            <blockTextureSet i="265" tileSet="1"/>
-            <blockTextureSet i="266" tileSet="1"/>
-            <blockTextureSet i="267" tileSet="1"/>
-            <blockTextureSet i="268" tileSet="1"/>
-            <blockTextureSet i="269" tileSet="1"/>
-            <blockTextureSet i="270" tileSet="1"/>
-            <blockTextureSet i="271" tileSet="1"/>
+            <blockTextureSet i="256" tileSet="0"/>
+            <blockTextureSet i="257" tileSet="0"/>
+            <blockTextureSet i="258" tileSet="0"/>
+            <blockTextureSet i="259" tileSet="0"/>
+            <blockTextureSet i="260" tileSet="0"/>
+            <blockTextureSet i="261" tileSet="0"/>
+            <blockTextureSet i="262" tileSet="0"/>
+            <blockTextureSet i="263" tileSet="0"/>
+            <blockTextureSet i="264" tileSet="0"/>
+            <blockTextureSet i="265" tileSet="0"/>
+            <blockTextureSet i="266" tileSet="0"/>
+            <blockTextureSet i="267" tileSet="0"/>
+            <blockTextureSet i="268" tileSet="0"/>
+            <blockTextureSet i="269" tileSet="0"/>
+            <blockTextureSet i="270" tileSet="0"/>
+            <blockTextureSet i="271" tileSet="0"/>
             <blockTextureSet i="272" tileSet="0"/>
             <blockTextureSet i="273" tileSet="0"/>
             <blockTextureSet i="274" tileSet="0"/>
@@ -373,22 +373,22 @@
             <blockTextureSet i="285" tileSet="0"/>
             <blockTextureSet i="286" tileSet="0"/>
             <blockTextureSet i="287" tileSet="0"/>
-            <blockTextureSet i="288" tileSet="1"/>
-            <blockTextureSet i="289" tileSet="1"/>
-            <blockTextureSet i="290" tileSet="1"/>
-            <blockTextureSet i="291" tileSet="1"/>
-            <blockTextureSet i="292" tileSet="1"/>
-            <blockTextureSet i="293" tileSet="1"/>
-            <blockTextureSet i="294" tileSet="1"/>
-            <blockTextureSet i="295" tileSet="1"/>
-            <blockTextureSet i="296" tileSet="1"/>
-            <blockTextureSet i="297" tileSet="1"/>
-            <blockTextureSet i="298" tileSet="1"/>
-            <blockTextureSet i="299" tileSet="1"/>
-            <blockTextureSet i="300" tileSet="1"/>
-            <blockTextureSet i="301" tileSet="1"/>
-            <blockTextureSet i="302" tileSet="1"/>
-            <blockTextureSet i="303" tileSet="1"/>
+            <blockTextureSet i="288" tileSet="0"/>
+            <blockTextureSet i="289" tileSet="0"/>
+            <blockTextureSet i="290" tileSet="0"/>
+            <blockTextureSet i="291" tileSet="0"/>
+            <blockTextureSet i="292" tileSet="0"/>
+            <blockTextureSet i="293" tileSet="0"/>
+            <blockTextureSet i="294" tileSet="0"/>
+            <blockTextureSet i="295" tileSet="0"/>
+            <blockTextureSet i="296" tileSet="0"/>
+            <blockTextureSet i="297" tileSet="0"/>
+            <blockTextureSet i="298" tileSet="0"/>
+            <blockTextureSet i="299" tileSet="0"/>
+            <blockTextureSet i="300" tileSet="0"/>
+            <blockTextureSet i="301" tileSet="0"/>
+            <blockTextureSet i="302" tileSet="0"/>
+            <blockTextureSet i="303" tileSet="0"/>
             <blockTextureSet i="304" tileSet="0"/>
             <blockTextureSet i="305" tileSet="0"/>
             <blockTextureSet i="306" tileSet="0"/>
@@ -405,22 +405,22 @@
             <blockTextureSet i="317" tileSet="0"/>
             <blockTextureSet i="318" tileSet="0"/>
             <blockTextureSet i="319" tileSet="0"/>
-            <blockTextureSet i="320" tileSet="1"/>
-            <blockTextureSet i="321" tileSet="1"/>
-            <blockTextureSet i="322" tileSet="1"/>
-            <blockTextureSet i="323" tileSet="1"/>
-            <blockTextureSet i="324" tileSet="1"/>
-            <blockTextureSet i="325" tileSet="1"/>
-            <blockTextureSet i="326" tileSet="1"/>
-            <blockTextureSet i="327" tileSet="1"/>
-            <blockTextureSet i="328" tileSet="1"/>
-            <blockTextureSet i="329" tileSet="1"/>
-            <blockTextureSet i="330" tileSet="1"/>
-            <blockTextureSet i="331" tileSet="1"/>
-            <blockTextureSet i="332" tileSet="1"/>
-            <blockTextureSet i="333" tileSet="1"/>
-            <blockTextureSet i="334" tileSet="1"/>
-            <blockTextureSet i="335" tileSet="1"/>
+            <blockTextureSet i="320" tileSet="0"/>
+            <blockTextureSet i="321" tileSet="0"/>
+            <blockTextureSet i="322" tileSet="0"/>
+            <blockTextureSet i="323" tileSet="0"/>
+            <blockTextureSet i="324" tileSet="0"/>
+            <blockTextureSet i="325" tileSet="0"/>
+            <blockTextureSet i="326" tileSet="0"/>
+            <blockTextureSet i="327" tileSet="0"/>
+            <blockTextureSet i="328" tileSet="0"/>
+            <blockTextureSet i="329" tileSet="0"/>
+            <blockTextureSet i="330" tileSet="0"/>
+            <blockTextureSet i="331" tileSet="0"/>
+            <blockTextureSet i="332" tileSet="0"/>
+            <blockTextureSet i="333" tileSet="0"/>
+            <blockTextureSet i="334" tileSet="0"/>
+            <blockTextureSet i="335" tileSet="0"/>
             <blockTextureSet i="336" tileSet="0"/>
             <blockTextureSet i="337" tileSet="0"/>
             <blockTextureSet i="338" tileSet="0"/>
@@ -437,22 +437,22 @@
             <blockTextureSet i="349" tileSet="0"/>
             <blockTextureSet i="350" tileSet="0"/>
             <blockTextureSet i="351" tileSet="0"/>
-            <blockTextureSet i="352" tileSet="1"/>
-            <blockTextureSet i="353" tileSet="1"/>
-            <blockTextureSet i="354" tileSet="1"/>
-            <blockTextureSet i="355" tileSet="1"/>
-            <blockTextureSet i="356" tileSet="1"/>
-            <blockTextureSet i="357" tileSet="1"/>
-            <blockTextureSet i="358" tileSet="1"/>
-            <blockTextureSet i="359" tileSet="1"/>
-            <blockTextureSet i="360" tileSet="1"/>
-            <blockTextureSet i="361" tileSet="1"/>
-            <blockTextureSet i="362" tileSet="1"/>
-            <blockTextureSet i="363" tileSet="1"/>
-            <blockTextureSet i="364" tileSet="1"/>
-            <blockTextureSet i="365" tileSet="1"/>
-            <blockTextureSet i="366" tileSet="1"/>
-            <blockTextureSet i="367" tileSet="1"/>
+            <blockTextureSet i="352" tileSet="0"/>
+            <blockTextureSet i="353" tileSet="0"/>
+            <blockTextureSet i="354" tileSet="0"/>
+            <blockTextureSet i="355" tileSet="0"/>
+            <blockTextureSet i="356" tileSet="0"/>
+            <blockTextureSet i="357" tileSet="0"/>
+            <blockTextureSet i="358" tileSet="0"/>
+            <blockTextureSet i="359" tileSet="0"/>
+            <blockTextureSet i="360" tileSet="0"/>
+            <blockTextureSet i="361" tileSet="0"/>
+            <blockTextureSet i="362" tileSet="0"/>
+            <blockTextureSet i="363" tileSet="0"/>
+            <blockTextureSet i="364" tileSet="0"/>
+            <blockTextureSet i="365" tileSet="0"/>
+            <blockTextureSet i="366" tileSet="0"/>
+            <blockTextureSet i="367" tileSet="0"/>
             <blockTextureSet i="368" tileSet="0"/>
             <blockTextureSet i="369" tileSet="0"/>
             <blockTextureSet i="370" tileSet="0"/>
@@ -469,22 +469,22 @@
             <blockTextureSet i="381" tileSet="0"/>
             <blockTextureSet i="382" tileSet="0"/>
             <blockTextureSet i="383" tileSet="0"/>
-            <blockTextureSet i="384" tileSet="1"/>
-            <blockTextureSet i="385" tileSet="1"/>
-            <blockTextureSet i="386" tileSet="1"/>
-            <blockTextureSet i="387" tileSet="1"/>
-            <blockTextureSet i="388" tileSet="1"/>
-            <blockTextureSet i="389" tileSet="1"/>
-            <blockTextureSet i="390" tileSet="1"/>
-            <blockTextureSet i="391" tileSet="1"/>
-            <blockTextureSet i="392" tileSet="1"/>
-            <blockTextureSet i="393" tileSet="1"/>
-            <blockTextureSet i="394" tileSet="1"/>
-            <blockTextureSet i="395" tileSet="1"/>
-            <blockTextureSet i="396" tileSet="1"/>
-            <blockTextureSet i="397" tileSet="1"/>
-            <blockTextureSet i="398" tileSet="1"/>
-            <blockTextureSet i="399" tileSet="1"/>
+            <blockTextureSet i="384" tileSet="0"/>
+            <blockTextureSet i="385" tileSet="0"/>
+            <blockTextureSet i="386" tileSet="0"/>
+            <blockTextureSet i="387" tileSet="0"/>
+            <blockTextureSet i="388" tileSet="0"/>
+            <blockTextureSet i="389" tileSet="0"/>
+            <blockTextureSet i="390" tileSet="0"/>
+            <blockTextureSet i="391" tileSet="0"/>
+            <blockTextureSet i="392" tileSet="0"/>
+            <blockTextureSet i="393" tileSet="0"/>
+            <blockTextureSet i="394" tileSet="0"/>
+            <blockTextureSet i="395" tileSet="0"/>
+            <blockTextureSet i="396" tileSet="0"/>
+            <blockTextureSet i="397" tileSet="0"/>
+            <blockTextureSet i="398" tileSet="0"/>
+            <blockTextureSet i="399" tileSet="0"/>
             <blockTextureSet i="400" tileSet="0"/>
             <blockTextureSet i="401" tileSet="0"/>
             <blockTextureSet i="402" tileSet="0"/>
@@ -501,22 +501,22 @@
             <blockTextureSet i="413" tileSet="0"/>
             <blockTextureSet i="414" tileSet="0"/>
             <blockTextureSet i="415" tileSet="0"/>
-            <blockTextureSet i="416" tileSet="1"/>
-            <blockTextureSet i="417" tileSet="1"/>
-            <blockTextureSet i="418" tileSet="1"/>
-            <blockTextureSet i="419" tileSet="1"/>
-            <blockTextureSet i="420" tileSet="1"/>
-            <blockTextureSet i="421" tileSet="1"/>
-            <blockTextureSet i="422" tileSet="1"/>
-            <blockTextureSet i="423" tileSet="1"/>
-            <blockTextureSet i="424" tileSet="1"/>
-            <blockTextureSet i="425" tileSet="1"/>
-            <blockTextureSet i="426" tileSet="1"/>
-            <blockTextureSet i="427" tileSet="1"/>
-            <blockTextureSet i="428" tileSet="1"/>
-            <blockTextureSet i="429" tileSet="1"/>
-            <blockTextureSet i="430" tileSet="1"/>
-            <blockTextureSet i="431" tileSet="1"/>
+            <blockTextureSet i="416" tileSet="0"/>
+            <blockTextureSet i="417" tileSet="0"/>
+            <blockTextureSet i="418" tileSet="0"/>
+            <blockTextureSet i="419" tileSet="0"/>
+            <blockTextureSet i="420" tileSet="0"/>
+            <blockTextureSet i="421" tileSet="0"/>
+            <blockTextureSet i="422" tileSet="0"/>
+            <blockTextureSet i="423" tileSet="0"/>
+            <blockTextureSet i="424" tileSet="0"/>
+            <blockTextureSet i="425" tileSet="0"/>
+            <blockTextureSet i="426" tileSet="0"/>
+            <blockTextureSet i="427" tileSet="0"/>
+            <blockTextureSet i="428" tileSet="0"/>
+            <blockTextureSet i="429" tileSet="0"/>
+            <blockTextureSet i="430" tileSet="0"/>
+            <blockTextureSet i="431" tileSet="0"/>
             <blockTextureSet i="432" tileSet="0"/>
             <blockTextureSet i="433" tileSet="0"/>
             <blockTextureSet i="434" tileSet="0"/>
@@ -533,22 +533,22 @@
             <blockTextureSet i="445" tileSet="0"/>
             <blockTextureSet i="446" tileSet="0"/>
             <blockTextureSet i="447" tileSet="0"/>
-            <blockTextureSet i="448" tileSet="1"/>
-            <blockTextureSet i="449" tileSet="1"/>
-            <blockTextureSet i="450" tileSet="1"/>
-            <blockTextureSet i="451" tileSet="1"/>
-            <blockTextureSet i="452" tileSet="1"/>
-            <blockTextureSet i="453" tileSet="1"/>
-            <blockTextureSet i="454" tileSet="1"/>
-            <blockTextureSet i="455" tileSet="1"/>
-            <blockTextureSet i="456" tileSet="1"/>
-            <blockTextureSet i="457" tileSet="1"/>
-            <blockTextureSet i="458" tileSet="1"/>
-            <blockTextureSet i="459" tileSet="1"/>
-            <blockTextureSet i="460" tileSet="1"/>
-            <blockTextureSet i="461" tileSet="1"/>
-            <blockTextureSet i="462" tileSet="1"/>
-            <blockTextureSet i="463" tileSet="1"/>
+            <blockTextureSet i="448" tileSet="0"/>
+            <blockTextureSet i="449" tileSet="0"/>
+            <blockTextureSet i="450" tileSet="0"/>
+            <blockTextureSet i="451" tileSet="0"/>
+            <blockTextureSet i="452" tileSet="0"/>
+            <blockTextureSet i="453" tileSet="0"/>
+            <blockTextureSet i="454" tileSet="0"/>
+            <blockTextureSet i="455" tileSet="0"/>
+            <blockTextureSet i="456" tileSet="0"/>
+            <blockTextureSet i="457" tileSet="0"/>
+            <blockTextureSet i="458" tileSet="0"/>
+            <blockTextureSet i="459" tileSet="0"/>
+            <blockTextureSet i="460" tileSet="0"/>
+            <blockTextureSet i="461" tileSet="0"/>
+            <blockTextureSet i="462" tileSet="0"/>
+            <blockTextureSet i="463" tileSet="0"/>
             <blockTextureSet i="464" tileSet="0"/>
             <blockTextureSet i="465" tileSet="0"/>
             <blockTextureSet i="466" tileSet="0"/>
