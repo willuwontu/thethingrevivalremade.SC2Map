@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Catalog>
+    <CTerrain id="BlackopsLab_A">
+        <Camera value="SpacePlatform"/>
+        <ReverbGlobal value="SewerPipe"/>
+        <ReverbAmbient value="Reverb_Lab2"/>
+        <CliffSets value="BraxisAlphaEx1Cliff1"/>
+        <FixedSkyboxModel value="SMX2_Background_Nebula_Generic"/>
+        <NonFixedSkyboxModel value="SMX2_Background_Starfield_Generic"/>
+        <EnvironmentMap value="Assets\Textures\battlestation_skybox_parallax_platform1_diff.dds"/>
+    </CTerrain>
     <CTerrain id="BraxisAlpha">
         <BlendTextures index="1" value="BraxisAlphaRust"/>
         <BlendTextures index="2" value="BraxisAlphaRock"/>
