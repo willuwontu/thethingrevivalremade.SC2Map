@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Preload>
+<Asset path="assets\textures\btn-techupgrade-terran-combatshield-color.dds" Type="Image"/>
+<Asset path="assets\textures\ui_arrowwhite.lvl0" Type="Image"/>
+<Asset path="assets\textures\btn-command-cancel.dds" Type="Image"/>
+<Asset path="assets\textures\aicommand_detection1.dds" Type="Image"/>
+<Asset path="btn-ability-burn.dds" Type="Image"/>
+<Asset path="assets\textures\btn-border-protoss-transportslot-filled-8slots.dds" Type="Image"/>
+<Asset path="assets\textures\btn-ability-terran-yamatogun-color.dds" Type="Image"/>
+<Asset path="assets\textures\white.dds" Type="Image"/>
+<Asset path="assets\textures\ui_speakerbutton_on.dds" Type="Image"/>
+<Asset path="assets\textures\blank.dds" Type="Image"/>
+<Asset path="assets\textures\ui_resourcesharing_button_normaloverpressedover_zerg.dds" Type="Image"/>
+<Asset path="assets\textures\border-transportslot-filled.dds" Type="Image"/>
+<Asset path="assets\textures\marsara_dark_sandnormal.dds" Type="Image"/>
+<Asset path="assets\textures\ui_arrowwhite.dds" Type="Image"/>
+<Asset path="assets\textures\white32.dds" Type="Image"/>
+<Asset path="assets\textures\marsara_dark_sandnormal.lvl0" Type="Image"/>
+<Asset path="assets\textures\btn-ability-terran-repair.dds" Type="Image"/>
+<Asset path="assets\textures\ui_resourcesharing_button_normalpressed_zerg.dds" Type="Image"/>
+<Asset path="assets\textures\ui_battlenet_challenge_button_checkmark.dds" Type="Image"/>
+<Asset path="assets\textures\btn-upgrade-terran-infantryweaponslevel3.dds" Type="Image"/>
+<Asset path="assets\textures\aicommand_detection1.lvl0" Type="Image"/>
+<Asset path="assets\textures\btn-ability-terran-tosh-mindblast.dds" Type="Image"/>
+<Asset path="assets\textures\sm_props_flame03_diff.lvl0" Type="Image"/>
+<Asset path="theloadingscreen.tga" Type="Image"/>
+<Asset path="assets\textures\btn-ability-terran-heal-color.dds" Type="Image"/>
+<Asset path="assets\textures\sm_props_flame03_diff.dds" Type="Image"/>
+<Asset path="assets\textures\btn-ability-terran-raynortossgrenade.dds" Type="Image"/>
+<Asset path="assets\textures\talent-raynor-level14-infantryattackspeed.dds" Type="Image"/>
 <Actor id="SYSTEM_ActorConfig"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -20,4 +49,460 @@
 >>>>>>> refs/remotes/origin/Willu
 =======
 >>>>>>> origin/master
+=======
+<Actor id="ActorShapeSphere"/>
+<Actor id="LightOmniBlue"/>
+<Actor id="LightOmniBlueLarge"/>
+<Actor id="LightOmniCyanLarge"/>
+<Actor id="LightOmniGreen"/>
+<Actor id="LightOmniGreenLarge"/>
+<Actor id="LightOmniOrange"/>
+<Actor id="LightOmniOrangeLarge"/>
+<Actor id="LightOmniPurple"/>
+<Actor id="LightOmniRed"/>
+<Actor id="LightOmniRedLarge"/>
+<Actor id="LightOmniWhite"/>
+<Actor id="LightOmniWhiteLarge"/>
+<Actor id="LightOmniYellow"/>
+<Actor id="LightOmniYellowLarge"/>
+<Actor id="PathingBlocker1x1Doodad"/>
+<Actor id="PathingBlocker2x2Doodad"/>
+<Actor id="PathingandSightBlocker2x2Doodad"/>
+<Actor id="PathingandSightBlocker1x1Doodad"/>
+<Actor id="AgriaCrops" Variations="1"/>
+<Actor id="AgriaCurtain" Variations="0,1,2,3"/>
+<Actor id="AgriaDebris" Variations="0"/>
+<Actor id="AgriaDebrisLarge" Variations="1"/>
+<Actor id="AgriaFoliage" Variations="1,2,4"/>
+<Actor id="AgriaUnderbrush" Variations="0,1,2,3"/>
+<Actor id="AlarmLight" Variations="0,1"/>
+<Actor id="AvernusBarrier" Variations="0,5"/>
+<Actor id="InvisibleCurtain"/>
+<Actor id="BillboardScrollingText" Variations="0,2"/>
+<Actor id="BillboardTall" Variations="1"/>
+<Actor id="BioDomeDoodad" Variations="1"/>
+<Actor id="BloodSplats" Variations="0,1,2,3,4,5"/>
+<Actor id="Brambles" Variations="0,2,3,5,6"/>
+<Actor id="BraxisAlphaBarrels" Variations="0,1,2"/>
+<Actor id="BraxisAlphaBioDome" Variations="0,1"/>
+<Actor id="BraxisAlphaFloodLights" Variations="1,2"/>
+<Actor id="BraxisAlphaMonitorBig" Variations="2"/>
+<Actor id="BullhornLights" Variations="0,1"/>
+<Actor id="Bush" Variations="2"/>
+<Actor id="CableLight"/>
+<Actor id="CastanarCabinet" Variations="0,2,6"/>
+<Actor id="CastanarCage" Variations="1"/>
+<Actor id="CastanarCamera" Variations="3"/>
+<Actor id="CastanarFloodlight" Variations="0,2"/>
+<Actor id="CastanarHoloProjector"/>
+<Actor id="CastanarLightboard" Variations="0,2,3"/>
+<Actor id="CastanarMonitorFloor" Variations="0,1"/>
+<Actor id="CastanarStasisTube" Variations="4,7,8"/>
+<Actor id="CastanarStasisTubeRising" Variations="1,2"/>
+<Actor id="CastanarStasisTubeQuad" Variations="0,1"/>
+<Actor id="CastanarTable"/>
+<Actor id="CastanarWorkstation" Variations="0,2,4"/>
+<Actor id="ChainLinkFenceStraight" Variations="0,1,3,4,6"/>
+<Actor id="CharIntestines" Variations="2"/>
+<Actor id="ColonistShipWrecked" Variations="0"/>
+<Actor id="CommandCenterWrecked"/>
+<Actor id="Crate" Variations="0,1,2,3,4,5"/>
+<Actor id="CrystalHuge" Variations="0,1"/>
+<Actor id="CrystalLarge" Variations="0"/>
+<Actor id="Decal" Variations="1,3,28"/>
+<Actor id="DecalProtoss" Variations="0"/>
+<Actor id="Dumpster" Variations="1"/>
+<Actor id="ExhaustPipes" Variations="2,4,6,7"/>
+<Actor id="FanVent" Variations="1"/>
+<Actor id="FanVentCliff" Variations="1"/>
+<Actor id="FireMedium"/>
+<Actor id="Floodlight" Variations="1,2"/>
+<Actor id="FlySwarm"/>
+<Actor id="ForceFieldWall"/>
+<Actor id="HavenDoodadsCrates" Variations="0,1,2,3,4"/>
+<Actor id="HavenFoliage" Variations="0,4"/>
+<Actor id="HavenTree" Variations="0,1,2,3,4,5,6,7"/>
+<Actor id="HighYieldConveyorBelt" Variations="0,1"/>
+<Actor id="HighYieldStorage" Variations="0"/>
+<Actor id="HighYieldMineralCart" Variations="1"/>
+<Actor id="JunkPileSpaceShips" Variations="1"/>
+<Actor id="KorhalCurtain" Variations="1,2"/>
+<Actor id="LandingLights" Variations="1"/>
+<Actor id="LandingTower"/>
+<Actor id="MammothFossils" Variations="0"/>
+<Actor id="BridgeOrdinalFootprint"/>
+<Actor id="MarSaraCliffDoodadLargeLow" Variations="1"/>
+<Actor id="MarSaraConveyorBelt" Variations="1"/>
+<Actor id="MarSaraCrack" Variations="0"/>
+<Actor id="MarSaraMineCart"/>
+<Actor id="MarSaraSkeletonLarge" Variations="0,1"/>
+<Actor id="MarSaraTreeDead" Variations="0,1,2,3,4,5"/>
+<Actor id="MineralCart" Variations="0,2,3"/>
+<Actor id="NewFolsomEquipment" Variations="0,1,2"/>
+<Actor id="NewFolsomLockers" Variations="1"/>
+<Actor id="NewFolsomMisc" Variations="0,1,3"/>
+<Actor id="NewFolsomPrisonCell"/>
+<Actor id="NewFolsomSandbags" Variations="0,1,2,3,4,5,6,7"/>
+<Actor id="Outhouse" Variations="1,3"/>
+<Actor id="PipesCorner" Variations="0,1,2,3"/>
+<Actor id="PipesCorner45" Variations="0,1"/>
+<Actor id="PipesLong" Variations="0,1,2,3"/>
+<Actor id="PipesShort45" Variations="0"/>
+<Actor id="PipesStack" Variations="0,1"/>
+<Actor id="PortZionBarrel" Variations="0"/>
+<Actor id="PortZionCompactor"/>
+<Actor id="PortZionDumpster"/>
+<Actor id="PortZionGarbagePile" Variations="0,1,2"/>
+<Actor id="PortZionGroundMix" Variations="0,1,2,3,5,7,8,9,10"/>
+<Actor id="PortZionJunkPile" Variations="0"/>
+<Actor id="PortZionScrapConveyorBelt" Variations="1"/>
+<Actor id="PortZionTires" Variations="0,1,2"/>
+<Actor id="PortZionTower" Variations="0,6"/>
+<Actor id="PowerCables" Variations="4,6,7,8"/>
+<Actor id="ThunderLightning"/>
+<Actor id="RainEmitterLarge"/>
+<Actor id="RainEmitterMedium"/>
+<Actor id="RedstoneTree" Variations="6"/>
+<Actor id="Rock" Variations="0,1,2,3,4,5,6,7,8,9,10"/>
+<Actor id="RockArch" Variations="5"/>
+<Actor id="RockWaterfall" Variations="6"/>
+<Actor id="RockGiant" Variations="4,5,7,9,10,11,12,13,14"/>
+<Actor id="RockLarge" Variations="4,5"/>
+<Actor id="Searchlight" Variations="2"/>
+<Actor id="SecurityFenceDiagonal" Variations="0,1"/>
+<Actor id="SecurityFenceStraight"/>
+<Actor id="SignsIcons" Variations="17"/>
+<Actor id="SpacePlatformArchwayLarge" Variations="1,2"/>
+<Actor id="SpacePlatformCablesLarge" Variations="3,5"/>
+<Actor id="SpacePlatformCautionLights" Variations="0,1"/>
+<Actor id="SpacePlatformCliffDoodadLarge" Variations="3"/>
+<Actor id="SpacePlatformCliffDoodadMedium" Variations="2"/>
+<Actor id="SpacePlatformExhaust" Variations="1"/>
+<Actor id="SpacePlatformFan" Variations="0,1"/>
+<Actor id="SpacePlatformFanLarge" Variations="1"/>
+<Actor id="SpacePlatformGenerator" Variations="0,1"/>
+<Actor id="SpacePlatformGroundDecals" Variations="3,4,6,7,8,11,13,14,15,16"/>
+<Actor id="SpacePlatformHatch"/>
+<Actor id="SpacePlatformHose" Variations="1,5,7"/>
+<Actor id="SpacePlatformRadar" Variations="0,1"/>
+<Actor id="SpacePlatformReactor" Variations="3"/>
+<Actor id="SpacePlatformSign" Variations="7"/>
+<Actor id="SpacePlatformTower" Variations="0,1,2"/>
+<Actor id="SpacePlatformVents" Variations="0,1"/>
+<Actor id="StoreFrontCityProps" Variations="0,2"/>
+<Actor id="SupplyTanks"/>
+<Actor id="TRaynor02CranePart2x2" Variations="0,4"/>
+<Actor id="TRaynor02CranePart3x3" Variations="3"/>
+<Actor id="TRaynor02CranePart5x5" Variations="2"/>
+<Actor id="VespeneTank" Variations="0,2"/>
+<Actor id="WallDockingBay"/>
+<Actor id="Waterfall"/>
+<Actor id="WaterTank" Variations="1"/>
+<Actor id="WaterTankTall" Variations="1"/>
+<Actor id="WindRough"/>
+<Actor id="WindowBoards" Variations="0,2,3"/>
+<Actor id="WindyAsh"/>
+<Actor id="WolfStatueDoodad" Variations="0"/>
+<Actor id="WreckedBattlecruiser"/>
+<Actor id="WreckedCargoTruckCorpse" Variations="0"/>
+<Actor id="XilFossils" Variations="0"/>
+<Actor id="ZergSpireDead" Variations="2"/>
+<Actor id="CargoTruck" Variations="0,1,2"/>
+<Actor id="ColonistSupplies" Variations="0,2,7,9"/>
+<Actor id="ColonistSupplyCrate" Variations="0,1,2,3,4,5,6,7,8"/>
+<Actor id="CreepCloud"/>
+<Actor id="KorhalBuildingDebris" Variations="0,2,4,5,7"/>
+<Actor id="NewFolsomCurtain" Variations="0,1,2"/>
+<Actor id="FlashingLights"/>
+<Actor id="ValhallaCabinet" Variations="0,3,5"/>
+<Actor id="ValhallaGenerator" Variations="1"/>
+<Actor id="CoolantTowerDoodad"/>
+<Actor id="Bodybag" Variations="1,2,3"/>
+<Actor id="KorhalFlag" Variations="0"/>
+<Actor id="DestroyedNydusWorm" Variations="1"/>
+<Actor id="CastanarMonitorLarge" Variations="1,2"/>
+<Actor id="CastanarStasisTubeLarge" Variations="2"/>
+<Actor id="AircraftAssembly" Variations="0"/>
+<Actor id="AvernusGasRefineryDoodad"/>
+<Actor id="AvernusMiningChamberDoodad"/>
+<Actor id="Bullhorn" Variations="4"/>
+<Actor id="ColonistCorpse" Variations="2,5,15,16"/>
+<Actor id="DeadTendrils" Variations="1"/>
+<Actor id="GateControlCables" Variations="0,1"/>
+<Actor id="InstallationRoof" Variations="4"/>
+<Actor id="MarineCorpse" Variations="2,3,4,5,8"/>
+<Actor id="PipeGroundBig" Variations="0,2,3,4"/>
+<Actor id="PipesSmallCorner" Variations="0"/>
+<Actor id="PipesSmallLong"/>
+<Actor id="PortZionGridFloorLiquidDoodad"/>
+<Actor id="ScientistCorpseGory" Variations="0,2,4,7"/>
+<Actor id="SplatAliveInside"/>
+<Actor id="TerrainObjectCastanarPowerGeneratorDoodad"/>
+<Actor id="TerrainObjectCoolantPipesDoodad" Variations="1"/>
+<Actor id="TRaynor01RadarDish"/>
+<Actor id="ValhallaTable"/>
+<Actor id="ValhallaWorkstation" Variations="2"/>
+<Actor id="WaterDropsDoodad"/>
+<Actor id="ZergInfestedCliff" Variations="0,1"/>
+<Actor id="CastanarMonitorFloorDestroyed" Variations="1"/>
+<Actor id="CastanarStasisTubeWallDestroyed" Variations="5"/>
+<Actor id="TruckTanker"/>
+<Actor id="TruckDump"/>
+<Actor id="TruckFlatbedConstruction"/>
+<Actor id="TruckFlatbed"/>
+<Actor id="Cougher"/>
+<Actor id="GateControl"/>
+<Actor id="MoebiusLabFloodLight" Variations="0"/>
+<Actor id="MoebiusLabZergCrates" Variations="0,1"/>
+<Actor id="MoebiusLabConsoles" Variations="1,2"/>
+<Actor id="MoebiusLabGlassWalls" Variations="0,1"/>
+<Actor id="MoebiusLabWallCap" Variations="4,8"/>
+<Actor id="MoebiusLab_DissectionArm"/>
+<Actor id="MoebiusLab_Splat" Variations="0,1,2,3,4,6"/>
+<Actor id="MoebiusLab_StasisTube" Variations="6,7"/>
+<Actor id="MoebiusLab_StasisTubeWall" Variations="4,5"/>
+<Actor id="CharDunesCurtain" Variations="0,2"/>
+<Actor id="TerrainObjectHybridLabBrutaliskCageDoodad"/>
+<Actor id="UmojanLabDebrisDoodad" Variations="3"/>
+<Actor id="KorhalMengskSymbol" Variations="0"/>
+<Actor id="UmojanLabCliffWallsTall" Variations="2"/>
+<Actor id="UmojanLabMonitorFloor" Variations="1,2"/>
+<Actor id="SpacePirateCapitalShipDoodad"/>
+<Actor id="UmojanLabDissectionArm"/>
+<Actor id="SpaceGunRack" Variations="3,4"/>
+<Actor id="HybridHologram" Variations="1"/>
+<Actor id="ArmoredDoor"/>
+<Actor id="CargoMover" Variations="4"/>
+<Actor id="ShipDock" Variations="2"/>
+<Actor id="SpaceDockPowerLines" Variations="0,1"/>
+<Actor id="SpaceCabinet" Variations="1,3,4,5,6"/>
+<Actor id="SpaceFloodLight" Variations="0,2"/>
+<Actor id="GenericSpacePipes" Variations="0,1,3,4,8,9,10,11"/>
+<Actor id="GenericSpacePipesDiagonal" Variations="1,10"/>
+<Actor id="KorhalRedCarpet"/>
+<Actor id="SpaceTurbine" Variations="2"/>
+<Actor id="ExplosiveMineEntrance"/>
+<Actor id="SpaceHornetRepairPanel" Variations="1"/>
+<Actor id="SpaceShipPiping" Variations="5"/>
+<Actor id="SpacePrisonDockGridFloor"/>
+<Actor id="UmojanLabWeaponCase" Variations="1"/>
+<Actor id="UmojanLabZergCratesOpen" Variations="0"/>
+<Actor id="SmokeEmbersMedium"/>
+<Actor id="UmojanLabAlarms"/>
+<Actor id="UmojanLabCellTable"/>
+<Actor id="UmojanLabViewingDeck"/>
+<Actor id="UmojanLabGlassWallPanel" Variations="0,2"/>
+<Actor id="UmojanLabHoloProjector"/>
+<Actor id="UmojanLabCrates" Variations="3"/>
+<Actor id="UmojanLabFloodLights" Variations="0"/>
+<Actor id="UmojanLabCliffStructure" Variations="0"/>
+<Actor id="UmojanLabRoom" Variations="3"/>
+<Actor id="UmojanLabTestTube" Variations="0,3,7"/>
+<Actor id="UmojanLabWallCap" Variations="2,4,5,6,7,8"/>
+<Actor id="UmojanLabWallConsoles" Variations="0,1,2"/>
+<Actor id="MilitarySupplies" Variations="2"/>
+<Actor id="CharFloorPanel"/>
+<Actor id="CharExhaustVents" Variations="3"/>
+<Actor id="DeadPrimalisk"/>
+<Actor id="SnowBlizzard"/>
+<Actor id="DeadQueen"/>
+<Actor id="ZerusTallGrassCluster" Variations="0"/>
+<Actor id="WaterGenerator" Variations="0,1,3,4,5"/>
+<Actor id="WaterGeneratorLarge"/>
+<Actor id="HybridVentShadowCaster"/>
+<Actor id="HybridWallConsoles" Variations="0,1,2"/>
+<Actor id="HybridMonitorFloor" Variations="0,1,2"/>
+<Actor id="HybridMonitorLarge" Variations="2"/>
+<Actor id="HybridMonitorWall" Variations="0,1"/>
+<Actor id="HybridCliffGasVent"/>
+<Actor id="FloodlightLensflare" Variations="1"/>
+<Actor id="IceWorldRockLarge" Variations="0"/>
+<Actor id="UmojanLabPillar1High" Variations="0,1"/>
+<Actor id="UmojanLabWallPanel2High" Variations="3"/>
+<Actor id="HybridWallPillar2High" Variations="2,3"/>
+<Actor id="HybridWallPanel2High" Variations="0"/>
+<Actor id="HybridWallPanelTall" Variations="1"/>
+<Actor id="HybridGlassWallPanel" Variations="0,2"/>
+<Actor id="HybridPowerConduit" Variations="0,1,2"/>
+<Actor id="HybridStasisWallTube" Variations="0,3,5"/>
+<Actor id="Blast_Craters" Variations="3"/>
+<Actor id="Korhal_TarmacSplat" Variations="0,1"/>
+<Actor id="Shadow_Tarmac_Splat" Variations="5,6"/>
+<Actor id="SpacePlatform_Lantern_Red_Blink" Variations="9"/>
+<Actor id="Korhal_Platform_GrimeSplats" Variations="0"/>
+<Actor id="CompoundSewers_Trashes" Variations="0,1,2,4,5,6,7"/>
+<Actor id="Elsecaro_Bush4x4" Variations="0,1,2,4"/>
+<Actor id="JarbanMinor_BloodSmear" Variations="0"/>
+<Actor id="JarbanMinor_MiningSupplies" Variations="3,4,6,7,8"/>
+<Actor id="JarbanMinor_SecurityGate" Variations="2"/>
+<Actor id="DOM_VentTower" Variations="0"/>
+<Actor id="DecalSpace_Baked" Variations="7,18"/>
+<Actor id="GenericFire_Large"/>
+<Actor id="MoebiusLabArmoredGenerator"/>
+<Actor id="Aiur_Trees_Log_Small" Variations="1"/>
+<Actor id="Korhal_SpacePort_Container" Variations="3"/>
+<Actor id="Korhal_SpacePort_Container_Destroyed" Variations="1"/>
+<Actor id="Korhal_SpacePort_Hose" Variations="1,2,3"/>
+<Actor id="Korhal_SpacePort_LuggageTruck" Variations="1,2"/>
+<Actor id="Korhal_ControlTower"/>
+<Actor id="Korhal_Debris" Variations="1"/>
+<Actor id="Purifier_Central_CoreMatrix"/>
+<Actor id="Purifier_Cybros_Hologram" Variations="5"/>
+<Actor id="SpacePlatform_Lantern_Blue_Blink" Variations="9"/>
+<Actor id="SpacePlatform_Lantern_Green_Blink" Variations="9"/>
+<Actor id="SpacePlatform_Lantern_White" Variations="0"/>
+<Actor id="SpacePlatform_Lantern_White_Blink" Variations="8,9"/>
+<Actor id="Shakuras_Ramp_Stairs" Variations="2"/>
+<Actor id="Slayn_TallGrassWindy" Variations="5,6,7"/>
+<Actor id="Explosions_Flashes"/>
+<Actor id="Shakuras_PowerCrystal"/>
+<Actor id="Korhal_WallCap" Variations="3"/>
+<Actor id="Korhal_FlagTattered"/>
+<Actor id="Korhal_ConstructionCranes" Variations="4"/>
+<Actor id="Korhal_FuelTank" Variations="2"/>
+<Actor id="Sparks_Protoss"/>
+<Actor id="Korhal_Platform_TireMarks" Variations="0,2"/>
+<Actor id="Korhal_Platform_SkyshieldEmblem" Variations="2"/>
+<Actor id="DOM_Crate" Variations="1,3"/>
+<Actor id="DOM_BaseMonitors" Variations="0"/>
+<Actor id="DOM_Decals" Variations="0,12"/>
+<Actor id="DOM_GroundTrims" Variations="0,4,6"/>
+<Actor id="DOM_Groundlights" Variations="0"/>
+<Actor id="DOM_GunRacks" Variations="1,2,4"/>
+<Actor id="DOM_LabWallScreens" Variations="0"/>
+<Actor id="DOM_Table_WarRoom" Variations="0"/>
+<Actor id="DOM_Walls_Interior" Variations="0,2,5"/>
+<Actor id="DOM_Walls_Caps_Interior" Variations="1,5"/>
+<Actor id="DOM_Walls_Corners_Interior" Variations="0"/>
+<Actor id="HeavySnowTree"/>
+<Actor id="SnowRefinery_Terran_Antenna" Variations="1"/>
+<Actor id="SnowRefinery_Terran_BaseSplats" Variations="0,1,3"/>
+<Actor id="SnowRefinery_Terran_WireConduits" Variations="7"/>
+<Actor id="Tarsonis_Carpet" Variations="0,1,6,11"/>
+<Actor id="Tarsonis_Fan" Variations="0,1"/>
+<Actor id="Tarsonis_Garden_Plant" Variations="1,2,3,7"/>
+<Actor id="Tarsonis_Garden_Topiary_Plant" Variations="5,10"/>
+<Actor id="Tarsonis_GroundTrims" Variations="1,2,3,9"/>
+<Actor id="Tarsonis_Guardrail" Variations="4,9,11"/>
+<Actor id="Tarsonis_Interior_Decor" Variations="2,10"/>
+<Actor id="Tarsonis_TargetDummy" Variations="3"/>
+<Actor id="Tarsonis_TargetRange" Variations="1,3,5"/>
+<Actor id="Tarsonis_Windows" Variations="0,3"/>
+<Actor id="Tarsonis_WireConduits" Variations="1"/>
+<Actor id="Tarsonis_WireConduitsWall" Variations="2"/>
+<Behavior id="ChargeAdded"/>
+<Behavior id="Fire"/>
+<Behavior id="Shadow"/>
+<Effect id="EMPSearch"/>
+<Effect id="Kill"/>
+<Effect id="ThermalLancesMU"/>
+<Effect id="Ram"/>
+<Effect id="GuassRifle"/>
+<Effect id="AcidSalivaU"/>
+<Effect id="AcidicBurn"/>
+<Effect id="MolotovDamage"/>
+<Effect id="Doorsmasher"/>
+<Effect id="ERFlamesetting"/>
+<Effect id="MolotovEffect"/>
+<Effect id="Damage"/>
+<Effect id="PunisherGrenadesSlow2"/>
+<Effect id="Acid"/>
+<Effect id="TheCold"/>
+<Light id="NoLight"/>
+<Light id="BattleNetGlue"/>
+<Light id="StartingFX"/>
+<Model id="LightOmniWhite"/>
+<Model id="PingArrow"/>
+<Model id="BeaconSpottedPing"/>
+<Model id="BeaconDetectPing"/>
+<Model id="BeaconClaimPing"/>
+<Model id="Battlecruiser"/>
+<Model id="MedicHealModel"/>
+<Model id="Marine"/>
+<Model id="BloodSplats"/>
+<Model id="FireMedium"/>
+<Model id="WindRough"/>
+<Model id="AberrationPortrait"/>
+<Model id="InfestedAbomination"/>
+<Model id="EMPTowerDebuff"/>
+<Model id="PsiDisruptorDebuff"/>
+<Model id="TossGrenadeWeapon"/>
+<Model id="MarineCorpse"/>
+<Model id="Flashlight"/>
+<Model id="FlamethrowerOwnership"/>
+<Model id="FlamethrowerReady"/>
+<Sound id="OrbitalCommand_CalldownMuleDrop" Variations="0"/>
+<Sound id="Marine_DeathFXBloodSpray"/>
+<Sound id="Marine_Death"/>
+<Sound id="UI_GenericError" Variations="0"/>
+<Sound id="Corruptor_Death"/>
+<Sound id="OverlordEgg_Birth" Variations="1"/>
+<Sound id="Medivac_Unload" Variations="0"/>
+<Sound id="UI_Horner05sTerminalButton"/>
+<Sound id="Alert_BaseUnderAttackKlaxon" Variations="0"/>
+<Sound id="Ultralisk_Roar"/>
+<Sound id="UI_PushButtonSelect" Variations="0"/>
+<Sound id="Terran_FireMedium"/>
+<Sound id="Alert_UniObjectiveUpdate" Variations="0"/>
+<Sound id="UI_TerranReminderPing"/>
+<Sound id="ColonistShip_Load" Variations="1"/>
+<Sound id="CivilianAttackImpact"/>
+<Sound id="HunterKiller_Death"/>
+<Sound id="JumpStompLiftOff"/>
+<Sound id="JumpStompFalling"/>
+<Sound id="JumpStompLand"/>
+<Sound id="Purifier_PowerDown"/>
+<Sound id="Purifier_PowerUp"/>
+<Sound id="ArmoryDropShip_Work" Variations="0"/>
+<Sound id="Aberration_Unburrow"/>
+<Sound id="DiabloSmall_voxRoar"/>
+<Sound id="Tychus05Briefing_GreenReticle1" Variations="0"/>
+<Sound id="Jukebox_Music06"/>
+<Sound id="Jukebox_Music05"/>
+<Sound id="Jukebox_Music04"/>
+<Sound id="Jukebox_Music07"/>
+<Sound id="Jukebox_Music08"/>
+<Sound id="Jukebox_Music09"/>
+<Sound id="Jukebox_Music10"/>
+<Sound id="Jukebox_Music13"/>
+<Sound id="Jukebox_Music12"/>
+<Sound id="Jukebox_Music11"/>
+<Sound id="TVReports_AmbiencePrison" Variations="0"/>
+<Sound id="Jukebox_Music00"/>
+<Sound id="Jukebox_Music01"/>
+<Sound id="Jukebox_Music02"/>
+<Sound id="Jukebox_Music03"/>
+<Sound id="TUI_ArmoryConsolePurchase"/>
+<Sound id="TextCrawlType"/>
+<Sound id="ArmoryDropship_Engines"/>
+<Sound id="ComingHome"/>
+<Sound id="TheThingTheme"/>
+<Soundtrack id="Music_Silence"/>
+<Terrain id="BraxisAlpha"/>
+<Unit id="Armory"/>
+<Unit id="FusionCore"/>
+<Unit id="DestructibleGateStraightHorizontalLowered"/>
+<Unit id="DestructibleGateStraightVerticalLowered"/>
+<Unit id="DestructibleGateStraightHorizontal"/>
+<Unit id="DestructibleGateStraightVertical"/>
+<Unit id="HiveMindEmulator"/>
+<Unit id="DestructibleGateStraightVerticalLowered2"/>
+<Unit id="Flamethrower"/>
+<Unit id="Gate"/>
+<Unit id="Grenade"/>
+<Unit id="Corpse"/>
+<Unit id="InfraredGoggles"/>
+<Unit id="Molotov"/>
+<Unit id="Marine2"/>
+<Unit id="Marine3"/>
+<Unit id="Medkit"/>
+<Unit id="Radio"/>
+<Unit id="RiotShield"/>
+<Unit id="BeaconRelay"/>
+<Unit id="FuelStation"/>
+<Unit id="Wrench"/>
+<User id="Models"/>
+<Weapon id="GuassRifle"/>
+<Weapon id="InfernalFlameThrower"/>
+>>>>>>> parent of 00f8177... Revert "Revert "Terrain and Data Changes""
 </Preload>
