@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Preload>
 <Actor id="SYSTEM_ActorConfig"/>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
+<Actor id="BraxisAlphaBarrels" Variations="0,1,2"/>
+<Actor id="SpacePlatformGenerator" Variations="0"/>
+<Actor id="BattleStation_Text_Decals" Variations="2"/>
+<Terrain id="BlackopsLab_A"/>
+<Unit id="ChangelingMarineShield"/>
+<Unit id="Marine"/>
+<Unit id="FusionReactor"/>
+<Unit id="SMRaynorMarine"/>
+<Unit id="RaynorLab"/>
+<<<<<<< HEAD
+=======
 <Terrain id="Agria"/>
+>>>>>>> refs/remotes/origin/Willu
+=======
+>>>>>>> origin/master
 </Preload>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlacedObjects Version="27">
+    <ObjectUnit Id="1939516549" Position="145.6296,55.9316,0" Rotation="0.211" Scale="1,1,1" UnitType="ChangelingMarineShield" Player="3"/>
+    <ObjectUnit Id="1129882952" Position="188,36,0" Rotation="5.4975" Scale="1,1,1" UnitType="FusionReactor"/>
+    <ObjectUnit Id="1485689832" Position="150.0656,50.9155,0" Rotation="5.839" Scale="1,1,1" UnitType="Marine" Player="1"/>
+    <ObjectUnit Id="568047178" Position="153.6862,56.0051,0" Rotation="6.2062" Scale="1,1,1" UnitType="RaynorLab" Player="6"/>
+    <ObjectUnit Id="973959365" Position="150.1166,52.761,0" Scale="1,1,1" UnitType="RaynorLab" Player="3"/>
+    <ObjectUnit Id="1802519259" Position="151.16,50.91,0" Rotation="5.8295" Scale="1,1,1" UnitType="RaynorLab" Player="1" Footprint="Footprint1x1">
+        <Flag Index="ForcePlacement" Value="1"/>
+    </ObjectUnit>
+    <ObjectUnit Id="1789359099" Position="148.532,54.1657,0" Rotation="0.1486" Scale="1,1,1" UnitType="SMRaynorMarine" Player="1"/>
+    <ObjectDoodad Id="1600246082" Variation="2" Position="241.6657,23.2683,7.9721" Scale="1,1,1" Type="BattleStation_Text_Decals"/>
+    <ObjectDoodad Id="648679131" Variation="1" Position="159.5,63.5,7.9721" Rotation="4.0385" Scale="1,1,1" Type="BraxisAlphaBarrels">
+        <Flag Index="ForcePlacement" Value="1"/>
+        <Flag Index="NoDoodadFootprint" Value="1"/>
+    </ObjectDoodad>
+    <ObjectDoodad Id="990104144" Variation="1" Position="160.5,61.5,7.9721" Rotation="3.069" Scale="1,1,1" Type="BraxisAlphaBarrels">
+        <Flag Index="ForcePlacement" Value="1"/>
+        <Flag Index="NoDoodadFootprint" Value="1"/>
+    </ObjectDoodad>
+    <ObjectDoodad Id="1061376177" Position="161.5,63.5,7.9721" Rotation="3.1342" Scale="1,1,1" Type="BraxisAlphaBarrels">
+        <Flag Index="ForcePlacement" Value="1"/>
+        <Flag Index="NoDoodadFootprint" Value="1"/>
+    </ObjectDoodad>
+    <ObjectDoodad Id="1936297927" Variation="1" Position="162.5,61.5,7.9721" Rotation="3.2487" Scale="1,1,1" Type="BraxisAlphaBarrels">
+        <Flag Index="ForcePlacement" Value="1"/>
+        <Flag Index="NoDoodadFootprint" Value="1"/>
+    </ObjectDoodad>
+    <ObjectDoodad Id="1949877601" Position="161.5,65.5,7.9721" Rotation="2.471" Scale="1,1,1" Type="BraxisAlphaBarrels">
+        <Flag Index="ForcePlacement" Value="1"/>
+        <Flag Index="NoDoodadFootprint" Value="1"/>
+    </ObjectDoodad>
+    <ObjectDoodad Id="1972969421" Variation="2" Position="159.5,61.5,7.9721" Rotation="0.2592" Scale="1,1,1" Type="BraxisAlphaBarrels">
+        <Flag Index="ForcePlacement" Value="1"/>
+        <Flag Index="NoDoodadFootprint" Value="1"/>
+    </ObjectDoodad>
+    <ObjectDoodad Id="2026819925" Position="159.5,66.5,7.9721" Rotation="3.498" Scale="1,1,1" Type="BraxisAlphaBarrels">
+        <Flag Index="ForcePlacement" Value="1"/>
+        <Flag Index="NoDoodadFootprint" Value="1"/>
+    </ObjectDoodad>
+    <ObjectDoodad Id="200848029" Position="182.5,23.5,7.9721" Scale="1,1,1" Type="SpacePlatformGenerator"/>
+</PlacedObjects>
