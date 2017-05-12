@@ -6,16 +6,5 @@
     <DataComponent Type="mapi">MapInfo</DataComponent>
     <DataComponent Type="trig">Triggers</DataComponent>
     <DataComponent Type="terr">t3Terrain.xml</DataComponent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <DataComponent Type="plob">Objects</DataComponent>
-=======
     <DataComponent Type="uiui">UI/Layout/DescIndex.SC2Layout</DataComponent>
->>>>>>> refs/remotes/origin/Willu
-=======
-    <DataComponent Type="plob">Objects</DataComponent>
->>>>>>> origin/master
-=======
->>>>>>> parent of 00f8177... Revert "Revert "Terrain and Data Changes""
 </Components>

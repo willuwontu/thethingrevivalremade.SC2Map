@@ -141,11 +141,11 @@
     
     <Frame type="Control" name="DefaultWindow">
         <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
-        <Anchor side="Left" relative="$this/ScrollableList" pos="Min" offset="0"/>
-        <Anchor side="Right" relative="$this/ScrollableList" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$this/ScrollableList/ContainerFrame" pos="Min" offset="0"/>
+        <Anchor side="Right" relative="$this/ScrollableList/ContainerFrame" pos="Max" offset="0"/>
         <Anchor side="Bottom" relative="$this/ScrollableList" pos="Max" offset="0"/>
         <Draggable val="true"/>
-        <PreserveAnchorOffset val="true"/>
+        <Width val="200"/>
         <DragConstraintFrame val="$parent"/>
         <DragCursor val="GripClosed"/>
         <DragHoverCursor val="GripOpen"/>
