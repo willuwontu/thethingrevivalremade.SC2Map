@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Preload>
 <Actor id="SYSTEM_ActorConfig"/>
+<<<<<<< HEAD
 <Actor id="BraxisAlphaBarrels" Variations="0,1,2"/>
 <Actor id="SpacePlatformGenerator" Variations="0"/>
 <Actor id="BattleStation_Text_Decals" Variations="2"/>
@@ -10,4 +11,7 @@
 <Unit id="FusionReactor"/>
 <Unit id="SMRaynorMarine"/>
 <Unit id="RaynorLab"/>
+=======
+<Terrain id="Agria"/>
+>>>>>>> refs/remotes/origin/Willu
 </Preload>
