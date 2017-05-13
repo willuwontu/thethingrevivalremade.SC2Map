@@ -57,6 +57,9 @@
         <HostSiteOps Ops="SOpAttachTarget"/>
         <Model value="Marine"/>
     </CActorModel>
+    <CActorUnit id="CreepTumor">
+        <CreepRateGrow value="0"/>
+    </CActorUnit>
     <!--                                                                                         -->
     <!-- DestructibleGateStraightHorizontal .................................................... -->
     <!--                                                                                         -->
@@ -851,13 +854,11 @@
     </CActorAction>
     <CActorAction id="MeatHook" parent="GenericAttack" effectImpact="MeatHookImpact" effectLaunch="MeatHookLaunch">
         <EditorCategories value=""/>
-        <On index="0" Terms="Effect.##effectImpact##.Start; At Caster; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="0" Terms="Effect.MeatHookImpact.Start; At Caster; FromEffectTreeDescendant" Send="ActionImpact"/>
         <On index="3" Terms="Effect.##effectAttack##.Start; At Caster" Send="Create"/>
         <On index="4" Terms="Effect.##effectLaunch##.Start; At Caster" Send="Create"/>
         <LaunchAttachQuery Methods="Weapon 1"/>
         <LaunchAssets Model="ThorHandGunAttackLaunch" Sound="SpineCrawler_AttackLaunch"/>
-        <ContainerAssets Model="##effectAttack##BunkerAttackLaunch"/>
-        <ImpactMap index="None" Sound="##id##Impact" ModelReaction="##id##ImpactReaction"/>
         <ImpactMap index="Dirt" Sound="##id##ImpactDirt" ModelReaction="##id##ImpactReactionDirt"/>
         <ImpactMap index="Rock" Sound="##id##ImpactRock" ModelReaction="##id##ImpactReactionRock"/>
         <ImpactMap index="Snow" Sound="##id##ImpactSnow" ModelReaction="##id##ImpactReactionSnow"/>
@@ -866,8 +867,6 @@
         <ImpactMap index="Flesh" Sound="##id##ImpactFlesh" ModelReaction="##id##ImpactReactionFlesh"/>
         <ImpactMap index="LightArmor" Sound="##id##ImpactLightArmor" ModelReaction="##id##ImpactReactionLightArmor"/>
         <ImpactMap index="Metal" Sound="##id##ImpactMetal" ModelReaction="##id##ImpactReactionMetal"/>
-        <ImpactMap index="Shield" Sound="##id##ImpactShield" ModelReaction="##id##ImpactReactionShield"/>
-        <DamageMap index="None" Model="##id##Damage" Sound="##id##Damage" ModelReaction="##id##DamageReaction"/>
         <DamageMap index="Dirt" Sound="##id##DamageDirt" ModelReaction="##id##DamageReactionDirt"/>
         <DamageMap index="Rock" Sound="##id##DamageRock" ModelReaction="##id##DamageReactionRock"/>
         <DamageMap index="Snow" Sound="##id##DamageSnow" ModelReaction="##id##DamageReactionSnow"/>
@@ -876,19 +875,20 @@
         <DamageMap index="Flesh" Sound="##id##DamageFlesh" ModelReaction="##id##DamageReactionFlesh"/>
         <DamageMap index="LightArmor" Sound="##id##DamageLightArmor" ModelReaction="##id##DamageReactionLightArmor"/>
         <DamageMap index="Metal" Sound="##id##DamageMetal" ModelReaction="##id##DamageReactionMetal"/>
-        <DamageMap index="Shield" Sound="##id##DamageShield" ModelReaction="##id##DamageReactionShield"/>
     </CActorAction>
     <CActorAction id="MeatHookImpact" parent="GenericAttack" effectAttack="MeatHookImpact" effectImpact="" effectLaunch="">
         <EditorCategories value=""/>
-        <On index="0" Terms="Effect.##effectImpact##.Start; At Caster; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="0" Terms="Effect.Start; At Caster; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="1" Terms="Effect.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="2" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On index="3" Terms="Effect.##effectAttack##.Start; At Caster" Send="Create"/>
         <On index="4" Terms="Effect.##effectLaunch##.Start; At Caster" Send="Create"/>
+        <On index="6" Terms="Effect.Start; At Caster" Send="Create"/>
         <LaunchAttachQuery Methods="AMFilterWeapon"/>
         <LaunchAssets Model="" Sound=""/>
-        <ContainerAssets Model="##effectAttack##BunkerAttackLaunch"/>
         <Beam value="MeatHookBeam"/>
         <Missile value=""/>
-        <ImpactMap index="None" Model="RaynorSnipeBigBloodImpact" Sound="InfestedAbominationAttackImpact" ModelReaction="##id##ImpactReaction"/>
+        <ImpactMap index="None" Model="RaynorSnipeBigBloodImpact" Sound="InfestedAbominationAttackImpact"/>
         <ImpactMap index="Dirt" Sound="##id##ImpactDirt" ModelReaction="##id##ImpactReactionDirt"/>
         <ImpactMap index="Rock" Sound="##id##ImpactRock" ModelReaction="##id##ImpactReactionRock"/>
         <ImpactMap index="Snow" Sound="##id##ImpactSnow" ModelReaction="##id##ImpactReactionSnow"/>
@@ -897,8 +897,6 @@
         <ImpactMap index="Flesh" Sound="##id##ImpactFlesh" ModelReaction="##id##ImpactReactionFlesh"/>
         <ImpactMap index="LightArmor" Sound="##id##ImpactLightArmor" ModelReaction="##id##ImpactReactionLightArmor"/>
         <ImpactMap index="Metal" Sound="##id##ImpactMetal" ModelReaction="##id##ImpactReactionMetal"/>
-        <ImpactMap index="Shield" Sound="##id##ImpactShield" ModelReaction="##id##ImpactReactionShield"/>
-        <DamageMap index="None" Model="##id##Damage" Sound="##id##Damage" ModelReaction="##id##DamageReaction"/>
         <DamageMap index="Dirt" Sound="##id##DamageDirt" ModelReaction="##id##DamageReactionDirt"/>
         <DamageMap index="Rock" Sound="##id##DamageRock" ModelReaction="##id##DamageReactionRock"/>
         <DamageMap index="Snow" Sound="##id##DamageSnow" ModelReaction="##id##DamageReactionSnow"/>
@@ -907,11 +905,9 @@
         <DamageMap index="Flesh" Sound="##id##DamageFlesh" ModelReaction="##id##DamageReactionFlesh"/>
         <DamageMap index="LightArmor" Sound="##id##DamageLightArmor" ModelReaction="##id##DamageReactionLightArmor"/>
         <DamageMap index="Metal" Sound="##id##DamageMetal" ModelReaction="##id##DamageReactionMetal"/>
-        <DamageMap index="Shield" Sound="##id##DamageShield" ModelReaction="##id##DamageReactionShield"/>
     </CActorAction>
     <CActorMissile id="MeatHookMissile" parent="GenericTentacleMissile" unitName="MeatHookMissile">
         <EditorCategories value=""/>
-        <On index="0" Terms="UnitBirth.##unitName##" Send="Create"/>
         <On Terms="ActorCreation" Send="AnimSetTimeScaleGlobal 0.200000"/>
         <Model value="MeatHook"/>
         <BarHeight value="1"/>
