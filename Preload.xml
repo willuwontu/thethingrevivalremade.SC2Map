@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Preload>
 <Actor id="SYSTEM_ActorConfig"/>
+<Actor id="AgriaCrops" Variations="2"/>
+<Actor id="AgriaTree" Variations="0,1,2,3,4,5,6,7"/>
+<Actor id="Elsecaro_Bush1x1" Variations="3,4"/>
 <Terrain id="BlackopsLab_A"/>
 <Unit id="Marine"/>
+<Unit id="BioDomeCommand"/>
+<Unit id="FusionReactor"/>
+<Unit id="HiveMindEmulator"/>
+<Unit id="TerrazineTank"/>
+<Unit id="LabTurretUp"/>
+<Unit id="SpaceArmoredGenerator"/>
+<Unit id="ShadowShieldGeneratorSmall"/>
 </Preload>
